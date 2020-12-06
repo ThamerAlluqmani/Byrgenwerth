@@ -6,6 +6,7 @@
      @include('_alerts.success')
     @endif
 
+
     <div class="card">
         <div class="card-header">
             <h4>{{$article->title}}</h4>

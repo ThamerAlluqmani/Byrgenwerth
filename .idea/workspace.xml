@@ -18,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -140,6 +141,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/lang/ar" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -203,9 +205,13 @@
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state width="512" height="446" key="SwitcherDM/0.0.2560.1050@0.0.2560.1050" timestamp="1606892831405" />
-    <state x="774" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1607202578151">
+    <state x="297" y="247" width="672" height="677" key="run.anything.popup" timestamp="1607264375127">
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
-    <state x="774" y="237" width="672" height="678" key="search.everywhere.popup/0.0.2560.1050@0.0.2560.1050" timestamp="1607202578151" />
+    <state x="297" y="247" width="672" height="677" key="run.anything.popup/0.0.2560.1050@0.0.2560.1050" timestamp="1607264375127" />
+    <state x="774" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1607266269291">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state x="774" y="237" width="672" height="678" key="search.everywhere.popup/0.0.2560.1050@0.0.2560.1050" timestamp="1607266269291" />
   </component>
 </project>

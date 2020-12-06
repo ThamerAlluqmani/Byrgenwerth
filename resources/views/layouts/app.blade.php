@@ -24,7 +24,10 @@
           integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If" crossorigin="anonymous">
 {{--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">--}}
 
-<!-- JS, Popper.js, and jQuery -->
+    <link href="{{asset('css/custom.css')}}" rel="stylesheet">
+    <link href="{{ asset('css/styles.css') }}" rel="stylesheet" type="text/css" >
+
+    <!-- JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
             crossorigin="anonymous"></script>
@@ -34,6 +37,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
             integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
             crossorigin="anonymous"></script>
+
+
 </head>
 <body>
 <div id="app">
@@ -111,5 +116,17 @@
         @yield('content')
     </main>
 </div>
+
+<footer>
+    <div class="card-footer mt-lg-5 text-center">
+        <a href="{{route('index')}}" class="text-info btn btn-link" style="text-decoration: none">{{__("Home")}}</a>
+        <a href="{{route('articles.index')}}" class="text-info btn btn-link" style="text-decoration: none">{{__("Browse all articles")}}</a>
+        @auth
+            <a href="{{route('dashboard')}}" class="text-info btn btn-link" style="text-decoration: none">{{__("Dashboard")}}</a>
+
+        @endauth
+
+    </div>
+</footer>
 </body>
 </html>

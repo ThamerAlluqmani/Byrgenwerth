@@ -27,13 +27,5 @@
                 @endforelse
             </div>
         </div>
-        <div class="">
-            <a href="{{route('articles.index')}}" class="btn btn-link">{{__("Browse all articles")}}</a>
-            @auth
-                <a href="{{route('dashboard')}}" class="btn btn-link">{{__("Dashboard")}}</a>
-
-            @endauth
-
-        </div>
     </div>
 @endsection
