@@ -51,8 +51,8 @@ class ArticleController extends Controller
         $user = Auth::user();
 
         $validateFields = [
-            'title'=>'min:3|max:50|required',
-            'content'=>'min:10|max:1000|required',
+            'title'=>'required',
+            'content'=>'required',
             'categories'=>'required'
         ];
         $this->validate($request,$validateFields);
@@ -124,8 +124,8 @@ class ArticleController extends Controller
         }
 
         $validateFields = [
-            'title'=>'min:3|max:50|required',
-            'content'=>'min:10|max:1000|required',
+            'title'=>'required',
+            'content'=>'required',
             'categories'=>'required'
         ];
         $this->validate($request,$validateFields);
