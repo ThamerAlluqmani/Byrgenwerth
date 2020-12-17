@@ -13,7 +13,9 @@
         </div>
 
         <div class="card-body">
-            {{ nl2br(e($article->content)) }}
+      
+            {!! nl2br(e($article->content)) !!}
+
         </div>
 
         <div class="card-footer">
