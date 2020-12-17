@@ -7,4 +7,4 @@ Auth::routes();
 Route::get('dashboard', 'HomeController@index')->name('dashboard');
 Route::resource('articles' , 'ArticleController');
 Route::post('comments/{article}' , 'CommentController@store')->name('comments.store');
-Auth::routes(['verify' => true]);
+//Auth::routes(['verify' => true]);
