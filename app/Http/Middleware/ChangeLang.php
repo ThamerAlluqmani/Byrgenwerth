@@ -3,7 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use http\Env\Request;
+use Illuminate\Http\Request;
 
 class ChangeLang
 {
@@ -14,7 +14,7 @@ class ChangeLang
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle(\Illuminate\Http\Request $request, Closure $next)
+    public function handle(Request $request, Closure $next)
     {
         if(session()->has('locale')) {
             app()->setLocale(session('locale'));
