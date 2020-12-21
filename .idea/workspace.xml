@@ -3,8 +3,37 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f034243-60a2-41ec-8986-defd34c88b33" name="Default Changelist" comment="" />
+    <list default="true" id="1f034243-60a2-41ec-8986-defd34c88b33" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_30_055446_create_articles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_30_055446_create_articles_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/articles/_article-template.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articles/_article-template.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/articles/_form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articles/_form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/articles/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articles/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,6 +50,9 @@
         <option value="CSS File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
@@ -132,6 +164,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1kpEWA8gA0O3EOQypvNXsMdX5vj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -186,11 +219,28 @@
       <workItem from="1607204635368" duration="591000" />
       <workItem from="1607205247448" duration="344000" />
       <workItem from="1607245099442" duration="599000" />
+      <workItem from="1608486288096" duration="609000" />
+      <workItem from="1608493783403" duration="2912000" />
+      <workItem from="1608534098711" duration="2614000" />
+      <workItem from="1608542100768" duration="732000" />
+      <workItem from="1608543162948" duration="980000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="378" y="326" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607184242738">
@@ -209,9 +259,9 @@
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state x="297" y="247" width="672" height="677" key="run.anything.popup/0.0.2560.1050@0.0.2560.1050" timestamp="1607264375127" />
-    <state x="774" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1607266269291">
+    <state x="774" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1608543904192">
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
-    <state x="774" y="237" width="672" height="678" key="search.everywhere.popup/0.0.2560.1050@0.0.2560.1050" timestamp="1607266269291" />
+    <state x="774" y="237" width="672" height="678" key="search.everywhere.popup/0.0.2560.1050@0.0.2560.1050" timestamp="1608543904192" />
   </component>
 </project>

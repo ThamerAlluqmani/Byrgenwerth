@@ -6,6 +6,7 @@
     "Edit article": "تعديل المقال",
     "Title": "العنوان",
     "Content" : "المحتوى",
+    "Info" : "نبذة",
     "Edit": "تعديل",
     "Update": "تحديث",
     "Author": "الكاتب",
@@ -15,6 +16,7 @@
     "You don't have any articles yet": "ليس لديك أي مقالة بعد",
     "No articles yet": "لايوجد أي مقالة بعد",
     "Are you sure you want to delete this article ?": "هل أنت متأكد من حذف هذه المقالة ؟",
+    "Simple overview about the content" : "نبذة بسيطة عن المحتوى",
 
 
     "Web": "ويب",

@@ -40,6 +40,7 @@
 
 
 
+{{--    <script src="//cdn.ckeditor.com/4.15.1/full/ckeditor.js"></script>--}}
 </head>
 <body>
 <div id="app">
@@ -103,6 +104,13 @@
         </div>
     </nav>
 
+    <a href="{{ route('locale.setting', 'en') }}">
+        EN
+    </a>
+    <a href="{{ route('locale.setting', 'es') }}">
+        ES
+    </a>
+
     <main class="py-4 container">
         @if($errors->any())
             <div class="alert alert-warning">
@@ -115,6 +123,7 @@
 
         @endif
         @yield('content')
+
     </main>
 </div>
 

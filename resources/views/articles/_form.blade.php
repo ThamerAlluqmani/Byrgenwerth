@@ -23,12 +23,34 @@
 </div>
 
 <div class="form-group">
+    <label for="content">{{__("Info")}}</label>
+
+    <textarea name="info" id="info" cols="3" rows="3"
+            placeholder="{{__("Simple overview about the content")}}"  class="form-control">@isset($article){{$article->info}}@endisset</textarea>
+
+
+</div>
+<div class="form-group">
     <label for="content">{{__("Content")}}</label>
+
     <textarea name="content" id="content" cols="30" rows="10"
               class="form-control">@isset($article){{$article->content}}@endisset</textarea>
+
 
 </div>
 
 <div class="form-group">
     <button class="btn btn-lg btn-success">{{$submitText}}</button>
 </div>
+
+
+
+<script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
+<script>
+    CKEDITOR.replace( 'content' );
+</script>
+
+<script src="//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace( 'summary-ckeditor' );
+</script>

@@ -4,7 +4,7 @@
 
     <div class="card">
         <div class="card-body">
-            <p>{{implode(' ', array_slice(explode(' ', $article->content), 0, 10))}} ... <a href="{{route('articles.show' , $article->id)}}">{{__("Show more")}}</a></p>
+            <p>{{implode(' ', array_slice(explode(' ', $article->info), 0, 10))}} ... <a href="{{route('articles.show' , $article->id)}}">{{__("Show more")}}</a></p>
         </div>
         <div class="card-footer">
             {{__("Author")}} : {{$article->user->name}}
