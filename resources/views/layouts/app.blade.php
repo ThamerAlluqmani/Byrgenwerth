@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="{{config('app.direction')}}">
+<html lang="{{config('app.locale')}}" dir="{{config('app.direction')}}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,6 +38,8 @@
 {{--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">--}}
 
 
+
+
     <script src="//cdn.ckeditor.com/4.15.1/full/ckeditor.js"></script>
 </head>
 <body>
@@ -56,11 +58,6 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav mr-auto">
-
-                    <li class="nav-item">
-                        <a href="{{route(\Illuminate\Routing\Route::currentRouteName(), 'ar')}}" class="nav-link">{{__("AR")}}</a>
-                        <a href="{{route(\Illuminate\Routing\Route::currentRouteName(), 'en')}}" class="nav-link">{{__("EN")}}</a>
-                    </li>
 
                 </ul>
 
@@ -107,6 +104,12 @@
         </div>
     </nav>
 
+    <a href="{{ route('locale.setting', 'en') }}">
+        EN
+    </a>
+    <a href="{{ route('locale.setting', 'es') }}">
+        ES
+    </a>
 
     <main class="py-4 container">
         @if($errors->any())
