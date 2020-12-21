@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{config('app.locale')}}" dir="{{config('app.direction')}}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="{{config('app.direction')}}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -57,6 +57,11 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav mr-auto">
 
+                    <li class="nav-item">
+                        <a href="{{route(\Illuminate\Routing\Route::currentRouteName(), 'ar')}}" class="nav-link">{{__("AR")}}</a>
+                        <a href="{{route(\Illuminate\Routing\Route::currentRouteName(), 'en')}}" class="nav-link">{{__("EN")}}</a>
+                    </li>
+
                 </ul>
 
 
@@ -102,12 +107,6 @@
         </div>
     </nav>
 
-    <a href="{{ route('locale.setting', 'en') }}">
-        EN
-    </a>
-    <a href="{{ route('locale.setting', 'es') }}">
-        ES
-    </a>
 
     <main class="py-4 container">
         @if($errors->any())
