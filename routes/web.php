@@ -18,4 +18,4 @@ Route::get('set-locale/{locale}', function ($locale) {
     App::setLocale($locale);
     session()->put('locale', $locale);
     return redirect()->back();
-})->middleware('App\Http\Middleware\ChangeLang')->name('locale.setting');
+})->middleware('ChangeLang.locale')->name('locale.setting');
