@@ -103,13 +103,7 @@
             </div>
         </div>
     </nav>
-
-    <a href="{{ route('locale.setting', 'en') }}">
-        EN
-    </a>
-    <a href="{{ route('locale.setting', 'es') }}">
-        ES
-    </a>
+    
 
     <main class="py-4 container">
         @if($errors->any())
