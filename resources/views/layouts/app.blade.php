@@ -58,8 +58,8 @@
                 <ul class="navbar-nav mr-auto">
 
                     <li class="nav-item">
-                        <a href="{{ route(Route::currentRouteName(), 'ar') }}" class="nav-link">{{__("AR")}}</a>
-                        <a href="{{route(Route::currentRouteName(), 'en')}}" class="nav-link">{{__("EN")}}</a>
+                        <a href="{{route(\Illuminate\Routing\Route::currentRouteName(), 'ar')}}" class="nav-link">{{__("AR")}}</a>
+                        <a href="{{route(\Illuminate\Routing\Route::currentRouteName(), 'en')}}" class="nav-link">{{__("EN")}}</a>
                     </li>
 
                 </ul>
