@@ -1,6 +1,23 @@
 @csrf
 <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
 
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.ckeditor').ckeditor();
+    });
+</script>
+
+<script type="text/javascript">
+    CKEDITOR.replace('content', {
+        filebrowserUploadUrl: "{{route('ckeditor.image-upload', ['_token' => csrf_token() ])}}",
+        filebrowserUploadMethod: 'form'
+    });
+</script>
+
+
+
+
+
 <div class="form-group">
     <label for="title">{{__("Title")}}</label>
     <input type="text" name="title" class="form-control" @isset($article) value="{{$article->title}}" @endisset>
@@ -44,16 +61,3 @@
 </div>
 
 
-<script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('.ckeditor').ckeditor();
-    });
-</script>
-
-<script type="text/javascript">
-    CKEDITOR.replace('content', {
-        filebrowserUploadUrl: "{{route('ckeditor.image-upload', ['_token' => csrf_token() ])}}",
-        filebrowserUploadMethod: 'form'
-    });
-</script>
