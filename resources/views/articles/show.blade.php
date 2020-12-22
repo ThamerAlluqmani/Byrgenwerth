@@ -38,6 +38,7 @@
         </span>
             </div>
         </div>
+    </div>
 
     <div class="card-body">
         <div class="align-items-center">
