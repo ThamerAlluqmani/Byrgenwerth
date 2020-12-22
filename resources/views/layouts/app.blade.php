@@ -60,10 +60,10 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <a href="{{route('articles.index')}}" class="nav-link"
+            <a href="{{route('articles.index')}}" class="nav-link nav-item"
             >{{__("Browse all articles")}}</a>
             @auth
-                <a href="{{route('dashboard')}}" class="nav-link"
+                <a href="{{route('dashboard')}}" class=" nav-item"
                 >{{__("Dashboard")}}</a>
 
             @endauth
@@ -95,7 +95,7 @@
                                 {{ Auth::user()->name }}
                             </a>
 
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-menu dropdown-menu-lg-left" aria-labelledby="navbarDropdown">
 
                                 <a href="{{route('dashboard')}}" class="dropdown-item">{{__("Dashboard")}}</a>
                                 <a href="{{route('articles.index')}}" class="dropdown-item">{{__("Articles")}}</a>
