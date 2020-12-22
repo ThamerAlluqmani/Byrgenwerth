@@ -60,7 +60,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <a href="{{route('articles.index')}}" class="nav-link nav-item"
+            <a href="{{route('articles.index')}}" class="nav-item"
             >{{__("Browse all articles")}}</a>
             @auth
                 <a href="{{route('dashboard')}}" class=" nav-item"
