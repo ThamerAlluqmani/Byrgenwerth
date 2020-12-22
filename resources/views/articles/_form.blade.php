@@ -34,7 +34,7 @@
     <label for="content">{{__("Content")}}</label>
 
     <textarea name="content" id="content" cols="30" rows="10"
-              class="form-control">@isset($article){{$article->content}}@endisset</textarea>
+              class="ckeditor form-control">@isset($article){{$article->content}}@endisset</textarea>
 
 
 </div>
@@ -43,3 +43,17 @@
     <button class="btn btn-lg btn-success">{{$submitText}}</button>
 </div>
 
+
+<script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.ckeditor').ckeditor();
+    });
+</script>
+
+<script type="text/javascript">
+    CKEDITOR.replace('content', {
+        filebrowserUploadUrl: "{{route('ckeditor.image-upload', ['_token' => csrf_token() ])}}",
+        filebrowserUploadMethod: 'form'
+    });
+</script>
