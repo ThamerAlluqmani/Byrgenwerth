@@ -22,7 +22,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f034243-60a2-41ec-8986-defd34c88b33" name="Default Changelist" comment="" />
+    <list default="true" id="1f034243-60a2-41ec-8986-defd34c88b33" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/articles/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articles/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -254,9 +259,9 @@
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state x="297" y="247" width="672" height="677" key="run.anything.popup/0.0.2560.1050@0.0.2560.1050" timestamp="1607264375127" />
-    <state x="774" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1608653484845">
+    <state x="774" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1608653760056">
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
-    <state x="774" y="237" width="672" height="678" key="search.everywhere.popup/0.0.2560.1050@0.0.2560.1050" timestamp="1608653484845" />
+    <state x="774" y="237" width="672" height="678" key="search.everywhere.popup/0.0.2560.1050@0.0.2560.1050" timestamp="1608653760056" />
   </component>
 </project>

@@ -16,15 +16,14 @@ class CommentController extends Controller
         $this->middleware("auth");
     }
 
-    public function store(Request $request , Article $article)
+    public function store(Request $request, Article $article)
     {
 
 
-
         $validateFields = [
-            'content'=>'min:3|max:200|required',
+            'content' => 'min:3|max:200|required',
         ];
-        $this->validate($request,$validateFields);
+        $this->validate($request, $validateFields);
 
         $request['user_id'] = Auth::id();
 
@@ -36,8 +35,7 @@ class CommentController extends Controller
     }
 
 
-
-    public function destroy(Comment $comment, Request $request)
+    public function destroy(Request $request, Comment $comment)
     {
 
         if (Auth::id() != $comment->user_id) {
