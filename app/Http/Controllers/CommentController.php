@@ -34,6 +34,9 @@ class CommentController extends Controller
         return redirect()->back();
 
     }
+
+
+
     public function destroy(Comment $comment, Request $request)
     {
 
@@ -43,7 +46,7 @@ class CommentController extends Controller
 
         } else {
             $comment->delete();
-            $comment->session()->flash('successMsg', __("Comment has been deleted successfully"));
+            $request->session()->flash('successMsg', __("Comment has been deleted successfully"));
             return redirect()->back();
 
         }

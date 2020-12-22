@@ -6,8 +6,7 @@ Route::get('/' , 'PageControl@index')->name('index');
 Auth::routes();
 Route::get('dashboard', 'HomeController@index')->name('dashboard');
 Route::resource('articles' , 'ArticleController');
-Route::post('comments/{article}' , 'CommentController@store')->name('comments.store');
-Route::post('comments/{article}' , 'CommentController@destroy')->name('comments.destroy');
+Route::resource('comments/{article}' , 'CommentController');
 //Auth::routes(['verify' => true]);
 Route::post('ckeditor/upload', 'CKEditorController@upload')->name('ckeditor.image-upload');
 
