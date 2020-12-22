@@ -30,6 +30,11 @@ class CommentController extends Controller
 
         $article->comments()->create($request->all());
 
+        $article->comments()->user_id = \Auth::user()->id;
+        $article->save();
+
+
+
         return redirect()->back();
 
     }
