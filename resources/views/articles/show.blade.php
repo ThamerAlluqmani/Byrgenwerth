@@ -7,6 +7,18 @@
     @endif
 
 
+    @auth
+        @if($article->user_id === \Auth::user()->id)
+            <div class="align-items-center text-center">
+                <a href="{{route('articles.edit', $article)}}" class="btn btn-warning btn-block">{{__("Edit")}}</a>
+                <form method="post" action="{{route('articles.destroy', $article)}}" style="display: inline-block">
+                    @method('DELETE')
+                    @csrf
+                    <button onclick="return confirm('{{__("Are you sure you want to delete this article ?")}}')" class=" btn-block btn btn-danger">{{__("Delete")}}</button>
+                </form>
+            </div>
+        @endif
+    @endauth
     <div class="card">
         <div class="card-header">
             <h4>{{$article->title}}</h4>
@@ -39,19 +51,7 @@
             </div>
         </div>
     </div>
-    @auth
 
-        @if($article->user_id === \Auth::user()->id)
-            <div class="align-items-center">
-                <a href="{{route('articles.edit', $article)}}" class="btn btn-warning">{{__("Edit")}}</a>
-                <form method="post" action="{{route('articles.destroy', $article)}}" style="display: inline-block">
-                    @method('DELETE')
-                    @csrf
-                    <button onclick="return confirm('{{__("Are you sure you want to delete this article ?")}}')" class="btn btn-danger">{{__("Delete")}}</button>
-                </form>
-            </div>
-        @endif
-        @endauth
 
     <div class="text-muted mt-4">
         <h4>
