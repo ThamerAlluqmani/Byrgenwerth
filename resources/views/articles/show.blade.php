@@ -69,7 +69,7 @@
                 @auth
 
                     @if($comment->user_id === \Auth::user()->id)
-                        <div class="align-items-center">
+                        <div class="align-items-center text-lg-left">
                             <form method="post" action="{{route('comments.destroy', $comment)}}" style="display: inline-block">
                                 @method('DELETE')
                                 @csrf

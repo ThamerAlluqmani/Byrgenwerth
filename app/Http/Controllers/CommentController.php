@@ -21,7 +21,7 @@ class CommentController extends Controller
 
 
         $validateFields = [
-            'content' => 'min:3|max:200|required',
+            'content' => 'min:3|required',
         ];
         $this->validate($request, $validateFields);
 
