@@ -13,7 +13,7 @@ class ArticleController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth')->except('show','index');
+        $this->middleware('auth')->except('show', 'index');
     }
 
 
@@ -25,8 +25,8 @@ class ArticleController extends Controller
     public function index()
     {
         //
-        $articles = Article::orderBy('id' , 'DESC')->get();
-        return view('articles.index' , compact('articles'));
+        $articles = Article::orderBy('id', 'DESC')->get();
+        return view('articles.index', compact('articles'));
     }
 
     /**
@@ -51,19 +51,25 @@ class ArticleController extends Controller
         $user = Auth::user();
 
         $validateFields = [
-            'title'=>'required',
-            'content'=>'required',
-            'categories'=>'required'
+            'title' => 'required',
+            'content' => 'required',
+            'categories' => 'required'
         ];
-        $this->validate($request,$validateFields);
+        $this->validate($request, $validateFields);
 
         $categories = array_values($request->categories);
         $article = $user->articles()->create($request->except('categories'));
         $article->categories()->attach($categories);
 
 
-        $request->session()->flash('successMsg' , __("Article has been created successfully"));
-        return view('articles.show' , compact('article'));
+        $request->session()->flash('successMsg', __("Article has been created successfully"));
+
+
+        $article->user_id = \Auth::user()->id;
+        $article->save();
+
+
+        return view('articles.show', compact('article'));
 
 
         //
@@ -124,18 +130,17 @@ class ArticleController extends Controller
         }
 
         $validateFields = [
-            'title'=>'required',
-            'content'=>'required',
-            'categories'=>'required'
+            'title' => 'required',
+            'content' => 'required',
+            'categories' => 'required'
         ];
-        $this->validate($request,$validateFields);
+        $this->validate($request, $validateFields);
 
 
         $article->update($request->all());
         $article->categories()->sync($request->categories);
-        $request->session()->flash('successMsg' , __("Article has been modified successfully"));
-        return view('articles.show' , compact('article'));
-
+        $request->session()->flash('successMsg', __("Article has been modified successfully"));
+        return view('articles.show', compact('article'));
 
 
         //
@@ -148,16 +153,16 @@ class ArticleController extends Controller
      * @param \App\Article $article
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Article $article , Request $request)
+    public function destroy(Article $article, Request $request)
     {
 
         if (Auth::id() != $article->user_id) {
 
             return abort(401);
 
-        }else{
+        } else {
             $article->delete();
-            $request->session()->flash('successMsg' , __("Article has been deleted successfully"));
+            $request->session()->flash('successMsg', __("Article has been deleted successfully"));
             return redirect('dashboard');
 
         }
