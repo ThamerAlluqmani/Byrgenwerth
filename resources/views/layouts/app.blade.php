@@ -60,11 +60,11 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <a  href="{{route('articles.index')}}" class="navbar-brand"
-               style="text-decoration: none">{{__("Browse all articles")}}</a>
+            <a href="{{route('articles.index')}}" class="nav-link"
+            >{{__("Browse all articles")}}</a>
             @auth
                 <a href="{{route('dashboard')}}" class="nav-link"
-                   style="text-decoration: none">{{__("Dashboard")}}</a>
+                >{{__("Dashboard")}}</a>
 
             @endauth
 
