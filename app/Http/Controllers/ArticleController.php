@@ -152,7 +152,7 @@ class ArticleController extends Controller
     {
         $article->delete();
         $request->session()->flash('successMsg' , __("Article has been deleted successfully"));
-        return redirect()->back();
+        return redirect('\dashboard');
         //
     }
 }
