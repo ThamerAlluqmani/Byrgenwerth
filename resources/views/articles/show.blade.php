@@ -10,11 +10,11 @@
     @auth
         @if($article->user_id === \Auth::user()->id)
             <div class="align-items-center text-center">
-                <a href="{{route('articles.edit', $article)}}" class="btn btn-warning btn-block">{{__("Edit")}}</a>
+                <a href="{{route('articles.edit', $article)}}" class="btn btn-warning btn-lg">{{__("Edit")}}</a>
                 <form method="post" action="{{route('articles.destroy', $article)}}" style="display: inline-block">
                     @method('DELETE')
                     @csrf
-                    <button onclick="return confirm('{{__("Are you sure you want to delete this article ?")}}')" class=" btn-block btn btn-danger">{{__("Delete")}}</button>
+                    <button onclick="return confirm('{{__("Are you sure you want to delete this article ?")}}')" class="btn btn-danger btn-lg">{{__("Delete")}}</button>
                 </form>
             </div>
         @endif
