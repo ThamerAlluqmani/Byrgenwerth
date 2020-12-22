@@ -150,9 +150,18 @@ class ArticleController extends Controller
      */
     public function destroy(Article $article , Request $request)
     {
-        $article->delete();
-        $request->session()->flash('successMsg' , __("Article has been deleted successfully"));
-        return redirect('dashboard');
+
+        if (Auth::id() != $article->user_id) {
+
+            return abort(401);
+
+        }else{
+            $article->delete();
+            $request->session()->flash('successMsg' , __("Article has been deleted successfully"));
+            return redirect('dashboard');
+
+        }
+
         //
     }
 }

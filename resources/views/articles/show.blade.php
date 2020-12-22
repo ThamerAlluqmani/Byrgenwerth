@@ -3,7 +3,7 @@
 @section('content')
 
     @if(Session::has('successMsg'))
-        @include('_alerts.success')
+     @include('_alerts.success')
     @endif
 
 
@@ -14,7 +14,7 @@
 
         <div class="card-body">
 
-            {{--            {!! nl2br(e($article->content)) !!}--}}
+{{--            {!! nl2br(e($article->content)) !!}--}}
             {!! $article->content !!}
 
         </div>
@@ -41,29 +41,18 @@
     </div>
     @auth
 
-        @forelse($articles as $article)
+    <div class="card-body">
 
+        <div class="align-items-center">
+            <a href="{{route('articles.edit', $article)}}" class="btn btn-warning">{{__("Edit")}}</a>
+            <form method="post" action="{{route('articles.destroy', $article)}}" style="display: inline-block">
+                @method('DELETE')
+                @csrf
+                <button onclick="return confirm('{{__("Are you sure you want to delete this article ?")}}')" class="btn btn-danger">{{__("Delete")}}</button>
+            </form>
+        </div>
 
-            <div class="list-group-item">
-                <div class="align-items-center">
-                    <a href="{{route('articles.edit', $article)}}" class="btn btn-warning">{{__("Edit")}}</a>
-                    <form method="post" action="{{route('articles.destroy', $article)}}" style="display: inline-block">
-                        @method('DELETE')
-                        @csrf
-                        <button onclick="return confirm('{{__("Are you sure you want to delete this article ?")}}')"
-                                class="btn btn-danger">{{__("Delete")}}</button>
-                    </form>
-                </div>
-            </div>
-
-
-
-
-        @empty
-            <p class="text-black-50">{{__("You don't have any articles yet")}}</p>
-        @endforelse
-
-    @endauth
+        @endauth
 
     <div class="text-muted mt-4">
         <h4>
