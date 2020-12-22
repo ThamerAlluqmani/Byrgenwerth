@@ -40,6 +40,7 @@
         </div>
     </div>
     @auth
+        @if($user->id == $article->id)
     <div class="card-body">
 
         <div class="align-items-center">
@@ -50,6 +51,7 @@
                 <button onclick="return confirm('{{__("Are you sure you want to delete this article ?")}}')" class="btn btn-danger">{{__("Delete")}}</button>
             </form>
         </div>
+        @endif
 
         @endauth
 
