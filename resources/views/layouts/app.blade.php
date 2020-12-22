@@ -60,6 +60,15 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
+            <a  href="{{route('articles.index')}}" class="navbar-brand"
+               style="text-decoration: none">{{__("Browse all articles")}}</a>
+            @auth
+                <a href="{{route('dashboard')}}" class="nav-link"
+                   style="text-decoration: none">{{__("Dashboard")}}</a>
+
+            @endauth
+
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav mr-auto">
