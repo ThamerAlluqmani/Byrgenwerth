@@ -43,7 +43,12 @@
     <button class="btn btn-lg btn-success">{{$submitText}}</button>
 </div>
 
+<script>
 
+$(window).on('load', function (){
+    $( '#content' ).ckeditor();
+});
+</script>
 
 <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
 <script>
