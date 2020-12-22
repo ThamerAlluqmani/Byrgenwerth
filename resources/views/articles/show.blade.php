@@ -39,8 +39,9 @@
             </div>
         </div>
     </div>
-
+    @auth
     <div class="card-body">
+
         <div class="align-items-center">
             <a href="{{route('articles.edit', $article)}}" class="btn btn-warning">{{__("Edit")}}</a>
             <form method="post" action="{{route('articles.destroy', $article)}}" style="display: inline-block">
@@ -49,6 +50,8 @@
                 <button onclick="return confirm('{{__("Are you sure you want to delete this article ?")}}')" class="btn btn-danger">{{__("Delete")}}</button>
             </form>
         </div>
+
+        @endauth
 
     <div class="text-muted mt-4">
         <h4>
