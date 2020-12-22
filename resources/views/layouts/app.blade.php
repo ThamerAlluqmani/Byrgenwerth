@@ -60,13 +60,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <a href="{{route('articles.index')}}" class="nav-item"
-            >{{__("Browse all articles")}}</a>
-            @auth
-                <a href="{{route('dashboard')}}" class=" nav-item"
-                >{{__("Dashboard")}}</a>
-
-            @endauth
+           
 
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
