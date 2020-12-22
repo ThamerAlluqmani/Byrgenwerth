@@ -52,5 +52,5 @@
 
 <script src="//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
 <script>
-    CKEDITOR.replace( 'summary-ckeditor' );
+    CKEDITOR.replace( 'content');
 </script>
