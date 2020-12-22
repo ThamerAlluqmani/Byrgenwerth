@@ -43,19 +43,3 @@
     <button class="btn btn-lg btn-success">{{$submitText}}</button>
 </div>
 
-<script>
-
-$(window).on('load', function (){
-    $( '#content' ).ckeditor();
-});
-</script>
-
-<script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
-<script>
-    CKEDITOR.replace( 'content' );
-</script>
-
-<script src="//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
-<script>
-    CKEDITOR.replace( 'content');
-</script>
