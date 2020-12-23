@@ -17,5 +17,8 @@ class PageControl extends Controller
 
         return view('index' , compact('articles'));
     }
+    public function contact(){
+        return view('contact');
+    }
 
 }

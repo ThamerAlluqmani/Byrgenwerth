@@ -132,8 +132,10 @@
 <footer>
     <div class="card-footer mt-lg-5 text-center">
         <a href="{{route('index')}}" class="text-info btn btn-link" style="text-decoration: none">{{__("Home")}}</a>
+        <a href="{{route('contact')}}" class="text-info btn btn-link" style="text-decoration: none">{{__("Contact us")}}</a>
         <a href="{{route('articles.index')}}" class="text-info btn btn-link"
            style="text-decoration: none">{{__("Browse all articles")}}</a>
+
         @auth
             <a href="{{route('dashboard')}}" class="text-info btn btn-link"
                style="text-decoration: none">{{__("Dashboard")}}</a>
