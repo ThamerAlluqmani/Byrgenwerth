@@ -19,7 +19,6 @@ class CommentController extends Controller
     public function store(Request $request, Article $article)
     {
 
-
         $validateFields = [
             'content' => 'min:3|required',
         ];
@@ -33,8 +32,7 @@ class CommentController extends Controller
         $article->comments()->user_id = \Auth::user()->id;
         $article->save();
 
-
-
+        $request->session()->flash('successMsg', __("Comment has been created successfully"));
         return redirect()->back();
 
     }
@@ -44,7 +42,7 @@ class CommentController extends Controller
     {
 
 
-            return(dd($comment));
+            return(dd($article->comments()->user_id));
 //            $request->session()->flash('successMsg', __("Comment has been deleted successfully"));
 //            return redirect()->back();
 
