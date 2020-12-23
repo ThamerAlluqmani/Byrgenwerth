@@ -45,7 +45,7 @@ class CommentController extends Controller
 
         if (Auth::id() != $comment->user_id) {
 
-            return abort(401);
+            return dd($comment->user());
 
         } else {
             $comment->delete();
