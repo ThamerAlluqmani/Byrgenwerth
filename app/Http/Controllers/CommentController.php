@@ -42,7 +42,7 @@ class CommentController extends Controller
     {
 
 
-        $comment->delete();
+//        $comment->delete();
 
         $request->session()->flash('successMsg', __("Comment has been deleted successfully"));
         return redirect()->back();
