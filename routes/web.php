@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/' , 'PageControl@index')->name('index');
-Route::get('/' , 'PageControl@contact')->name('contact');
+Route::get('/contact' , 'PageControl@contact')->name('contact');
 Auth::routes();
 Route::get('dashboard', 'HomeController@index')->name('dashboard');
 Route::resource('articles' , 'ArticleController');
