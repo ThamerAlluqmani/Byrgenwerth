@@ -65,18 +65,18 @@
                 <p>{{__("Author")}} : {{$comment->user->name}}</p>
                 {{$comment->content}}
 
-                @auth
+{{--                @auth--}}
 
-                    @if($comment->user_id === \Auth::user()->id)
-                        <div class="align-items-center text-lg-left">
-                            <form method="post" action="{{route('comments.destroy', $comment)}}" style="display: inline-block">
-                                @method('DELETE')
-                                @csrf
-                                <button onclick="return confirm('{{__("Are you sure you want to delete this comment ?")}}')" class="btn btn-danger">{{__("Delete")}}</button>
-                            </form>
-                        </div>
-                    @endif
-                @endauth
+{{--                    @if($comment->user_id === \Auth::user()->id)--}}
+{{--                        <div class="align-items-center text-lg-left">--}}
+{{--                            <form method="post" action="{{route('comments.destroy', $comment)}}" style="display: inline-block">--}}
+{{--                                @method('DELETE')--}}
+{{--                                @csrf--}}
+{{--                                <button onclick="return confirm('{{__("Are you sure you want to delete this comment ?")}}')" class="btn btn-danger">{{__("Delete")}}</button>--}}
+{{--                            </form>--}}
+{{--                        </div>--}}
+{{--                    @endif--}}
+{{--                @endauth--}}
 
 
             </div>

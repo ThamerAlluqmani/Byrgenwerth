@@ -38,22 +38,22 @@ class CommentController extends Controller
     }
 
 
-    public function destroy(Request $request, Comment $comment, Article $article)
-    {
-
-        if (Auth::id() !=  $article->comments()->user_id) {
-
-            dd($comment->user_id , Auth::id());
-        }else{
-
-            $comment->delete();
-            $request->session()->flash('successMsg', __("Comment has been deleted successfully"));
-            return redirect()->back();
-        }
-
-
-        //
-    }
+//    public function destroy(Request $request, Comment $comment, Article $article)
+//    {
+//
+//        if (Auth::id() !=  $article->comments()->user_id) {
+//
+//            dd($comment->user_id , Auth::id());
+//        }else{
+//
+//            $comment->delete();
+//            $request->session()->flash('successMsg', __("Comment has been deleted successfully"));
+//            return redirect()->back();
+//        }
+//
+//
+//        //
+//    }
 
 
 }
