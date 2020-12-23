@@ -38,14 +38,14 @@ class CommentController extends Controller
     }
 
 
-    public function destroy(Request $request, Comment $comment , Article $article)
+    public function destroy(Request $request, Comment $comment, Article $article)
     {
 
 
-        return (dd($request->all()));
+        $comment->delete();
 
-//            $request->session()->flash('successMsg', __("Comment has been deleted successfully"));
-//            return redirect()->back();
+        $request->session()->flash('successMsg', __("Comment has been deleted successfully"));
+        return redirect()->back();
 
 
         //
