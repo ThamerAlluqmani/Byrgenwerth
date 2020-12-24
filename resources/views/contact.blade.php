@@ -10,8 +10,11 @@
         </div>
 
         <div class="card-body">
-            <div class="row">
-               <p>test</p>
+            <div class="row text-info">
+               <p>{{__("Email : thamer.allogmani@gmail.com")}}</p>
+               <p>{{__("This site was Created By : Thamer Alluqmani ")}}</p>
+               <p>{{__("This site was Created By : ")}}</p>
+               <p>{{__("This site was Created By : ")}}</p>
             </div>
         </div>
 
