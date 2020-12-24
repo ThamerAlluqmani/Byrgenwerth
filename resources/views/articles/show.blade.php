@@ -62,11 +62,43 @@
             {{__("Comments")}}
         </h4>
     </div>
+
+    @auth
+        <div id="commentForm" class="mt-5">
+
+            <div class="card">
+                <h5 class="card-header bg-secondary text-white">{{__("Comment")}}</h5>
+
+                <div class="card-body">
+                    <form action="{{route('comments.store' , $article->id)}}" method="post">
+                        @csrf
+                        <div class="form-group">
+                            <textarea name="content" id="content" cols="30" rows="10" class="form-control"
+                                      placeholder="{{__("Type your comment here")}}"></textarea>
+                        </div>
+
+                        <div class="form-group">
+
+
+                            <button class="btn btn-secondary" type="submit">{{__("Submit")}}</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+    @else
+        <a href="{{route('login')}}" class="btn btn-link mb-4">{{__("Login to comment")}}</a>
+
+    @endauth
+
     <div id="comments" class="mt-4">
         @forelse($article->comments as $comment)
 
 
-            <h5 class="card-header ">{{__("Author")}} : {{$comment->user->name}}</h5>
+            <h5 class="card-header ">{{$comment->user->name}}</h5>
             <div class="card p-3 mb-2">
 
                 <br>
@@ -103,36 +135,7 @@
 
 
 
-    @auth
-        <div id="commentForm" class="mt-5">
 
-            <div class="card">
-                <h5 class="card-header bg-secondary text-white">{{__("Comment")}}</h5>
-
-                <div class="card-body">
-                    <form action="{{route('comments.store' , $article->id)}}" method="post">
-                        @csrf
-                        <div class="form-group">
-                            <textarea name="content" id="content" cols="30" rows="10" class="form-control"
-                                      placeholder="{{__("Type your comment here")}}"></textarea>
-                        </div>
-
-                        <div class="form-group">
-
-
-                            <button class="btn btn-secondary" type="submit">{{__("Submit")}}</button>
-                        </div>
-
-                    </form>
-                </div>
-            </div>
-
-
-        </div>
-    @else
-        <a href="{{route('login')}}" class="btn btn-link mb-4">{{__("Login to comment")}}</a>
-
-    @endauth
 
 
 
