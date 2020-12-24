@@ -108,11 +108,12 @@
                     @endguest
                 </ul>
 
-                <a class="nav-link btn btn-primary" href="{{ route('locale.setting', 'en') }}">
+                <a class="text-info nav-link" href="{{ route('locale.setting', 'en') }}">
                     EN
                 </a>
-                <a class="nav-link btn btn-primary" href="{{ route('locale.setting', 'ar') }}">
-                    ar
+
+                <a class="text-info nav-link" href="{{ route('locale.setting', 'ar') }}">
+                    AR
                 </a>
 
             </div>

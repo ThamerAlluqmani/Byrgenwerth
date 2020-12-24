@@ -24,17 +24,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1f034243-60a2-41ec-8986-defd34c88b33" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ArticleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/ChangeLang.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/ChangeLang.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/articles/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articles/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/articles/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articles/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,7 +232,7 @@
       <workItem from="1608728653254" duration="5674000" />
       <workItem from="1608750638460" duration="315000" />
       <workItem from="1608751510949" duration="1462000" />
-      <workItem from="1608811478237" duration="9659000" />
+      <workItem from="1608811478237" duration="10585000" />
     </task>
     <servers />
   </component>
@@ -284,9 +275,9 @@
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state x="297" y="247" width="672" height="677" key="run.anything.popup/0.0.2560.1050@0.0.2560.1050" timestamp="1607264375127" />
-    <state x="774" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1608814339467">
+    <state x="774" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1608826276356">
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
-    <state x="774" y="237" width="672" height="678" key="search.everywhere.popup/0.0.2560.1050@0.0.2560.1050" timestamp="1608814339467" />
+    <state x="774" y="237" width="672" height="678" key="search.everywhere.popup/0.0.2560.1050@0.0.2560.1050" timestamp="1608826276356" />
   </component>
 </project>

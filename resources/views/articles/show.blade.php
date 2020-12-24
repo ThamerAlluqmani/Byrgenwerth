@@ -120,7 +120,7 @@
                         <div class="form-group">
 
 
-                            <button class="btn btn-success" type="submit">{{__("Submit")}}</button>
+                            <button class="btn btn-secondary" type="submit">{{__("Submit")}}</button>
                         </div>
 
                     </form>
