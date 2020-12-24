@@ -66,7 +66,6 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav mr-auto">
-
                 </ul>
 
 
@@ -108,6 +107,14 @@
                         </li>
                     @endguest
                 </ul>
+
+                <a class="nav-link btn btn-primary" href="{{ route('locale.setting', 'en') }}">
+                    EN
+                </a>
+                <a class="nav-link btn btn-primary" href="{{ route('locale.setting', 'ar') }}">
+                    ar
+                </a>
+
             </div>
         </div>
     </nav>

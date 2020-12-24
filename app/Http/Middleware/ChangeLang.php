@@ -16,9 +16,12 @@ class ChangeLang
      * @param Closure $next
      * @return mixed
      */
-    public function handle(Request $request, Closure $next)
+    public function handle($request, Closure $next)
     {
-        App::setLocale($request->languge);
+        if(session()->has('locale')) {
+            app()->setLocale(session('locale'));
+            app()->setLocale(config('app.locale'));
+        }
 
         return $next($request);
     }

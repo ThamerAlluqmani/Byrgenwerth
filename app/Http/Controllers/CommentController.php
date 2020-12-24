@@ -9,51 +9,105 @@ use Illuminate\Support\Facades\Auth;
 
 class CommentController extends Controller
 {
-    //
-
     public function __construct()
     {
-        $this->middleware("auth");
+        $this->middleware('auth');
     }
 
-    public function store(Request $request, Article $article)
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
     {
+        //
+    }
 
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request , Article $article)
+    {
         $validateFields = [
-            'content' => 'min:3|required',
+
+            'content' => 'required',
         ];
         $this->validate($request, $validateFields);
-
         $request['user_id'] = Auth::id();
-
-
         $article->comments()->create($request->all());
-
-        $article->comments()->user_id = \Auth::user()->id;
-        $article->save();
 
         $request->session()->flash('successMsg', __("Comment has been created successfully"));
         return redirect()->back();
 
     }
 
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Comment  $comment
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Comment $comment)
+    {
+        //
+    }
 
-//    public function destroy(Request $request, Comment $comment, Article $article)
-//    {
-//
-//        if (Auth::id() !=  $article->comments()->user_id) {
-//
-//            dd($comment->user_id , Auth::id());
-//        }else{
-//
-//            $comment->delete();
-//            $request->session()->flash('successMsg', __("Comment has been deleted successfully"));
-//            return redirect()->back();
-//        }
-//
-//
-//        //
-//    }
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Comment  $comment
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Comment $comment)
+    {
+        //
+    }
 
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Comment  $comment
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, Comment $comment)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Comment  $comment
+     * @return \Illuminate\Http\Response
+     */
+
+
+    public function destroy(Comment $comment, Request $request, Article $article)
+    {
+        if (Auth::id() != $comment->user_id) {
+
+            return abort(401);
+
+        } else {
+            $comment->delete();
+            $request->session()->flash('successMsg', __("Comment has been deleted successfully"));
+            return redirect()->back();
+        }
+    }
 
 }

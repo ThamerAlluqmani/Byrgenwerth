@@ -19,7 +19,9 @@
     "Are you sure you want to delete this comment ?": "هل أنت متأكد من حذف هذا التعليق ؟",
     "Simple overview about the content" : "نبذة بسيطة عن المحتوى",
     "Comment has been created successfully": "تم وضع التعليق بنجاح",
+    "Comment has been deleted successfully": "تم حذف التعليق بنجاح",
     "Contact us" : "تواصل معنا",
+    "Delete comment" :"حذف التعليق",
 
 
     "Web": "ويب",
