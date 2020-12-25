@@ -57,13 +57,12 @@
                 @endguest
             </ul>
 
-            <a class="text-info nav-link" href="{{ route('locale.setting', 'en') }}">
-                <i class="fa fa-language"></i> EN
+            <a class="text-info nav-link" href="{{ route('locale.setting', 'ar') }}">AR <i class="fa fa-language"></i>
             </a>
 
 
-            <a class="text-info nav-link" href="{{ route('locale.setting', 'ar') }}">
-                <i class="fa fa-language"></i> AR
+            <a class="text-info nav-link" href="{{ route('locale.setting', 'en') }}">
+                <i class="fa fa-language"></i> EN
             </a>
 
         </div>
