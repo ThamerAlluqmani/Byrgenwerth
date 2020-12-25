@@ -40,6 +40,7 @@
                         <div class="dropdown-menu dropdown-menu-lg-left" aria-labelledby="navbarDropdown">
 
                             <a href="{{route('dashboard')}}" class="dropdown-item"><i class="fa fa-dashboard"></i> {{__("Dashboard")}}</a>
+                            <a href="{{route('profile')}}" class="dropdown-item"><i class="fa fa-user"></i> {{__("Profile")}}</a>
                             <a href="{{route('articles.index')}}" class="dropdown-item"><i class="fa fa-files-o"></i> {{__("Articles")}}</a>
 
 

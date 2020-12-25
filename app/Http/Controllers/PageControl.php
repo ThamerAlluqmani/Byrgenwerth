@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PageControl extends Controller
 {
@@ -20,5 +21,6 @@ class PageControl extends Controller
     public function contact(){
         return view('contact');
     }
+
 
 }

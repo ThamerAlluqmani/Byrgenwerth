@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/' , 'PageControl@index')->name('index');
 Route::get('/contact' , 'PageControl@contact')->name('contact');
+Route::get('profile' , 'ProfileControl@index')->name('profile');
 Auth::routes();
 Route::get('dashboard', 'HomeController@index')->name('dashboard');
 Route::resource('articles' , 'ArticleController');
@@ -15,5 +16,7 @@ Route::get('set-locale/{locale}', function ($locale) {
     session()->put('locale', $locale);
     return redirect()->back();
 })->middleware('change.locale')->name('locale.setting');
+
+
 
 
