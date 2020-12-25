@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <title>استرخي</title>
+    <title>{{ config('app.name', 'Byrgenwerth') }} | @yield('title')</title>
     <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css" integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="fa/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
@@ -52,12 +52,12 @@
 
         <div id="features" class="mt-5">
             <p class="px-3 mb-5">
-                بيرغنويرث، هي كلية قديمة خصصت لدراسة العظماء وعالمهم، مجموعة من طلاب هذه الكلية اكتشفوا معابد قديمة يحتويها نوع من أنواع الدماء القديمة لاحقاً عرفت بدماء العظماء
-                ادى ظهور هذه الدماء لحدوث فوضى وتمرد على ماستر ويليام، وهو أحد كبار والشخصيات المعروفة داخل هذه المدرسة           </p>
+                بيرغنويرث: هي كلية قديمة خصصت لدراسة العظماء وعالمهم، مجموعة من طلاب هذه الكلية اكتشفوا معابد قديمة يحتويها نوع من أنواع الدماء القديمة لاحقاً عرفت بدماء العظماء
+                أدى ظهور هذه الدماء لحدوث فوضى وتمرد على ماستر ويليام، وهو أحد كبار الشخصيات المعروفة داخل هذه الكلية ، تم إنشاء المدونة بناء على هذه الكلية حيث سيتم دراسة ماتبقى من الآثار          </p>
             <div class="row text-center">
                 <div class="col-md-4">
-                    <i class="fa fa-home fa-lg mb-2" aria-hidden="true"></i>
-                    <a class="nav-link text-info" href="{{route('articles.index')}}">{{__("Home")}}</a>
+                    <i class="fa fa-files-o fa-lg mb-2" aria-hidden="true"></i>
+                    <a class="nav-link text-info" href="{{route('articles.index')}}">{{__("Articles")}}</a>
                     <p>{{__("Browse all articles")}}</p>
                 </div>
                 <div class="col-md-4">
