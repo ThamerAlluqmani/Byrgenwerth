@@ -53,7 +53,8 @@ class ArticleController extends Controller
         $validateFields = [
             'title' => 'required',
             'content' => 'required',
-            'categories' => 'required'
+            'categories' => 'required',
+            'info' => 'required'
         ];
         $this->validate($request, $validateFields);
 
