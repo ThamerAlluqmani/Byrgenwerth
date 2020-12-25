@@ -22,6 +22,8 @@
     "Comment has been deleted successfully": "تم حذف التعليق بنجاح",
     "Contact us" : "تواصل معنا",
     "Delete comment" :"حذف التعليق",
+    "Email": "البريد الإلكتروني",
+    "Soon": "قريباً",
 
 
     "Web": "ويب",
@@ -31,6 +33,7 @@
     "Latest articles": "آخر المقالات",
     "Home": "الرئيسية",
     "Browse all articles": "تصفح جميع المقالات",
+    "Create your first new article" : "أنشئ مقالك الأول",
     "All articles": "جميع المقالات",
 
     "Articles": "المقالات",

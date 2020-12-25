@@ -95,7 +95,7 @@
     @endauth
 
     <div id="comments" class="mt-4">
-        @forelse($article->comments as $comment)
+        @forelse($article->comments()->orderBy('id', 'DESC')->get() as $comment)
 
 
             <h5 class="card-header ">{{$comment->user->name}}</h5>
