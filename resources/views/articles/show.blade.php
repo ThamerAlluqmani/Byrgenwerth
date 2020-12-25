@@ -9,7 +9,7 @@
 
     <div class="card">
         <div class="card-header">
-            <h4>{{$article->title}}</h4>
+            <h4><i class="fa fa-file-text"></i> : {{$article->title}}</h4>
         </div>
 
         <div class="card-body">
@@ -43,12 +43,12 @@
                     <div class="align-items-center">
 
                         <br>
-                        <a href="{{route('articles.edit', $article)}}" class="btn btn-warning">{{__("Edit")}}</a>
+                        <a href="{{route('articles.edit', $article)}}" class="btn btn-warning"><i class="fa fa-edit"></i> {{__("Edit")}}</a>
                         <form method="post" action="{{route('articles.destroy', $article)}}" style="display: inline-block">
                             @method('DELETE')
                             @csrf
                             <button onclick="return confirm('{{__("Are you sure you want to delete this article ?")}}')"
-                                    class="btn btn-danger">{{__("Delete")}}</button>
+                                    class="btn btn-danger"><i class="fa fa-trash"></i> {{__("Delete")}}</button>
                         </form>
                     </div>
                 @endif
@@ -67,7 +67,7 @@
         <div id="commentForm" class="mt-5">
 
             <div class="card">
-                <h5 class="card-header bg-secondary text-white">{{__("Comment")}}</h5>
+                <h5 class="card-header bg-secondary text-white"><i class="fa fa-comment"></i> {{__("Comment")}}</h5>
 
                 <div class="card-body">
                     <form action="{{route('comments.store' , $article->id)}}" method="post">
@@ -80,7 +80,7 @@
                         <div class="form-group">
 
 
-                            <button class="btn btn-secondary" type="submit">{{__("Submit")}}</button>
+                            <button class="btn btn-secondary" type="submit"><i class="fa fa-send"></i> {{__("Submit")}}</button>
                         </div>
 
                     </form>
@@ -90,7 +90,7 @@
 
         </div>
     @else
-        <a href="{{route('login')}}" class="btn btn-link mb-4">{{__("Login to comment")}}</a>
+        <a href="{{route('login')}}" style="text-decoration: none"   class="text-info "> <i class="fa fa-user"></i> {{__("Login to comment")}}</a>
 
     @endauth
 
@@ -98,7 +98,7 @@
         @forelse($article->comments()->orderBy('id', 'DESC')->get() as $comment)
 
 
-            <h5 class="card-header ">{{$comment->user->name}}</h5>
+            <h5 class="card-header "><i class="fa fa-user"></i> : {{$comment->user->name}}</h5>
             <div class="card p-3 mb-2">
 
                 <br>
@@ -115,7 +115,7 @@
                                 @csrf
                                 <button
                                     onclick="return confirm('{{__("Are you sure you want to delete this comment ?")}}')"
-                                    class="btn btn-danger">{{__("Delete comment")}}</button>
+                                    class="btn btn-danger"><i class="fa fa-trash"></i> {{__("Delete comment")}}</button>
                             </form>
                         </div>
                     @endif

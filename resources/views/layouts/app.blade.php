@@ -21,8 +21,8 @@
 
 
     <!-- Styles -->
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style2.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('fa/css/font-awesome.min.css') }}" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -61,11 +61,11 @@
                     <!-- Authentication Links -->
                     @guest
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <a class="nav-link" href="{{ route('login') }}"><i class="fa fa-user-o fa-lg mb-2" aria-hidden="true"></i> {{ __('Login') }}</a>
                         </li>
                         @if (Route::has('register'))
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <a class="nav-link" href="{{ route('register') }}"><i class="fa fa-user-plus fa-lg mb-2" aria-hidden="true"></i> {{ __('Register') }}</a>
                             </li>
                         @endif
                     @else
@@ -77,14 +77,14 @@
 
                             <div class="dropdown-menu dropdown-menu-lg-left" aria-labelledby="navbarDropdown">
 
-                                <a href="{{route('dashboard')}}" class="dropdown-item">{{__("Dashboard")}}</a>
-                                <a href="{{route('articles.index')}}" class="dropdown-item">{{__("Articles")}}</a>
+                                <a href="{{route('dashboard')}}" class="dropdown-item"><i class="fa fa-dashboard"></i> {{__("Dashboard")}}</a>
+                                <a href="{{route('articles.index')}}" class="dropdown-item"><i class="fa fa-files-o"></i> {{__("Articles")}}</a>
 
 
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
+                                    <i class="fa fa-user-times"></i> {{ __('Logout') }}
                                 </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -96,11 +96,12 @@
                 </ul>
 
                 <a class="text-info nav-link" href="{{ route('locale.setting', 'en') }}">
-                    EN
+                    <i class="fa fa-language"></i> EN
                 </a>
 
+
                 <a class="text-info nav-link" href="{{ route('locale.setting', 'ar') }}">
-                    AR
+                   <i class="fa fa-language"></i> AR
                 </a>
 
             </div>
@@ -126,15 +127,15 @@
 
 <footer>
     <div class="card-footer mt-lg-5 text-center">
-        <a href="{{route('index')}}" class="text-info btn btn-link" style="text-decoration: none">{{__("Home")}}</a>
+        <a href="{{route('index')}}" class="text-info btn btn-link" style="text-decoration: none"> <i class="fa fa-home"></i> {{__("Home")}}</a>
         <a href="{{route('articles.index')}}" class="text-info btn btn-link"
-           style="text-decoration: none">{{__("Browse all articles")}}</a>
+           style="text-decoration: none"> <i class="fa fa-files-o"></i> {{__("Browse all articles")}}</a>
         @auth
             <a href="{{route('dashboard')}}" class="text-info btn btn-link"
-               style="text-decoration: none">{{__("Dashboard")}}</a>
+               style="text-decoration: none"><i class="fa fa-dashboard"></i> {{__("Dashboard")}}</a>
 
         @endauth
-        <a href="{{route('contact')}}" class="text-info btn btn-link" style="text-decoration: none">{{__("Contact us")}}</a>
+        <a href="{{route('contact')}}" class="text-info btn btn-link" style="text-decoration: none"> <i class="fa fa-file-text-o"></i> {{__("Contact us")}}</a>
 
 
     </div>

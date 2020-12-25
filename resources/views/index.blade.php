@@ -56,19 +56,59 @@
                 أدى ظهور هذه الدماء لحدوث فوضى وتمرد على ماستر ويليام، وهو أحد كبار الشخصيات المعروفة داخل هذه الكلية ، تم إنشاء المدونة بناء على هذه الكلية حيث سيتم دراسة ماتبقى من الآثار          </p>
             <div class="row text-center">
                 <div class="col-md-4">
-                    <i class="fa fa-files-o fa-lg mb-2" aria-hidden="true"></i>
-                    <a class="nav-link text-info" href="{{route('articles.index')}}">{{__("Articles")}}</a>
-                    <p>{{__("Browse all articles")}}</p>
+                 <ul class="navbar-nav ml-auto ">
+                     <li class="nav-item">
+                         <a class="nav-link text-secondary"
+                            href="{{route('articles.index')}}">
+                             <i class="fa fa-files-o fa-lg mb-2" aria-hidden="true"></i>
+                             <br>
+                             {{__("Articles")}}</a>
+
+                         <p>{{__("Browse all articles")}}</p>
+                     </li>
+                 </ul>
                 </div>
                 <div class="col-md-4">
-                    <i class="fa fa-user fa-lg mb-2" aria-hidden="true"></i>
-                    <a class="nav-link text-info" href="{{route('register')}}">{{_("regitster")}}</a>
-                    <p>{{__("Create your first new article")}}</p>
+                    @auth
+                        <ul class="navbar-nav ml-auto ">
+                            <li class="nav-item">
+                                <a class="nav-link text-secondary"
+                                   href="{{route('dashboard')}}">
+                                    <i class="fa fa-dashboard fa-lg mb-2" aria-hidden="true"></i>
+                                    <br>
+                                    {{__("Dashboard")}}</a>
+
+                                <p>{{__("Create your first new article")}}</p>
+                            </li>
+                        </ul>
+                    @endauth
+                   @guest
+                        <ul class="navbar-nav ml-auto ">
+                            <li class="nav-item">
+                                <a class="nav-link text-secondary"
+                                   href="{{route('register')}}">
+                                    <i class="fa fa-user-plus fa-lg mb-2" aria-hidden="true"></i>
+                                    <br>
+                                    {{__("Register")}}</a>
+
+                                <p>{{__("Create your first new article")}}</p>
+                            </li>
+                        </ul>
+
+                    @endguest
                 </div>
                 <div class="col-md-4">
-                    <i class="fa fa-file-text fa-lg mb-2" aria-hidden="true"></i>
-                    <a class="nav-link text-info" href="{{route('contact')}}">{{_("Contact us")}}</a>
-                    <p>{{__("أخبرنا ماتريد التحدث بشأنه")}}</p>
+                    <ul class="navbar-nav ml-auto ">
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary"
+                               href="{{route('contact')}}">
+                                <i class="fa fa-file-text-o fa-lg mb-2" aria-hidden="true"></i>
+                                <br>
+                                {{__("Contact us")}}</a>
+
+                            <p>{{__("Tell us what you want to talk about it")}}</p>
+                        </li>
+                    </ul>
                 </div>
 
             </div>

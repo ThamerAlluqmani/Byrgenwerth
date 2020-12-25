@@ -6,7 +6,7 @@
 
 
         <div class="card-header">
-            <h3 class="text-muted text-center">{{__("Contact us")}}</h3>
+            <h3 class="text-muted text-center"><i class="fa fa-file-text-o"></i> {{__("Contact us")}}</h3>
         </div>
 
         <div class="card-body">
