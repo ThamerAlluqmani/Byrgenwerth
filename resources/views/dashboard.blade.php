@@ -10,13 +10,13 @@
     <div class="card">
 
         <div class="text-center card-header text-muted">
-         <h4>{{__("Dashboard")}}</h4>
+         <h4><i class="fa fa-dashboard"></i> {{__("Dashboard")}}</h4>
         </div>
 
 
            <div class="text-center mt-3">
-               <a href="{{route('articles.create')}}" class="btn  btn-primary mb-4">{{__("Create new article")}}</a>
-               <a href="{{route('articles.index')}}" class="btn btn-primary mb-4">{{__("Browse all articles")}}</a>
+               <a href="{{route('articles.create')}}" class="btn  btn-primary mb-4"><i class="fa fa-file-text-o"></i> {{__("Create new article")}}</a>
+               <a href="{{route('articles.index')}}" class="btn btn-secondary mb-4"><i class="fa fa-files-o"></i> {{__("Browse all articles")}}</a>
            </div>
 
         <div class="container m-auto card-body">
@@ -28,14 +28,14 @@
                    <div class="list-group-item">
                        <div class="mb-4">
                           <div class="mb-4">
-                              <a href="{{route('articles.show', $article)}}">{{$article->title}}</a>
+                              <a class="text-info" style="text-decoration: none" href="{{route('articles.show', $article)}}"><i class="fa fa-file-text"></i> {{$article->title}}</a>
                           </div>
                            <div class="align-items-center">
-                               <a href="{{route('articles.edit', $article)}}" class="btn btn-warning">{{__("Edit")}}</a>
+                               <a href="{{route('articles.edit', $article)}}" class="btn btn-warning"><i class="fa fa-edit"></i> {{__("Edit")}}</a>
                                <form method="post" action="{{route('articles.destroy', $article)}}" style="display: inline-block">
                                    @method('DELETE')
                                    @csrf
-                                   <button onclick="return confirm('{{__("Are you sure you want to delete this article ?")}}')" class="btn btn-danger">{{__("Delete")}}</button>
+                                   <button onclick="return confirm('{{__("Are you sure you want to delete this article ?")}}')" class="btn btn-danger"><i class="fa fa-trash"></i> {{__("Delete")}}</button>
                                </form>
                            </div>
                        </div>
