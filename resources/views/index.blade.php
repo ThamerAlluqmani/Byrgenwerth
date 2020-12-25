@@ -4,9 +4,7 @@
 <html lang="ar" dir="rtl">
 <head>
     <title>{{ config('app.name', 'Byrgenwerth') }} | @yield('title')</title>
-    <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css" integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="fa/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+    @include('layouts.scripts')
     <style>
         body {
             font-family: 'Cairo', sans-serif;
@@ -42,6 +40,7 @@
     </style>
 </head>
 <body>
+@include('layouts.nav')
 <div class="container-fluid">
     <div class="container shadow-lg p-0">
         <div id="intro">
@@ -58,7 +57,7 @@
                 <div class="col-md-4">
                  <ul class="navbar-nav ml-auto ">
                      <li class="nav-item">
-                         <a class="nav-link text-secondary"
+                         <a class="nav-link text-info"
                             href="{{route('articles.index')}}">
                              <i class="fa fa-files-o fa-lg mb-2" aria-hidden="true"></i>
                              <br>
@@ -72,7 +71,7 @@
                     @auth
                         <ul class="navbar-nav ml-auto ">
                             <li class="nav-item">
-                                <a class="nav-link text-secondary"
+                                <a class="nav-link text-info"
                                    href="{{route('dashboard')}}">
                                     <i class="fa fa-dashboard fa-lg mb-2" aria-hidden="true"></i>
                                     <br>
@@ -85,7 +84,7 @@
                    @guest
                         <ul class="navbar-nav ml-auto ">
                             <li class="nav-item">
-                                <a class="nav-link text-secondary"
+                                <a class="nav-link text-info"
                                    href="{{route('register')}}">
                                     <i class="fa fa-user-plus fa-lg mb-2" aria-hidden="true"></i>
                                     <br>
@@ -100,7 +99,7 @@
                 <div class="col-md-4">
                     <ul class="navbar-nav ml-auto ">
                         <li class="nav-item">
-                            <a class="nav-link text-secondary"
+                            <a class="nav-link text-info"
                                href="{{route('contact')}}">
                                 <i class="fa fa-file-text-o fa-lg mb-2" aria-hidden="true"></i>
                                 <br>
