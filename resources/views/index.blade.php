@@ -120,7 +120,7 @@
 
 
                 <div class="card-header">
-                    <h3 class="text-muted text-center">{{__("Latest articles")}}</h3>
+                    <h3 class="text-muted text-center"><i class="fa fa-files-o"></i> {{__("Latest articles")}}</h3>
                 </div>
 
                 <div class="card-body">
