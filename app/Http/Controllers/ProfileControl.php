@@ -69,9 +69,17 @@ class ProfileControl extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request)
     {
-        //
+        $user = Auth::user();
+        if (Auth::id() != $user->id) {
+
+            return abort(401);
+
+        }
+        $user->update($request->all());
+        $request->session()->flash('successMsg', __("User has been modified successfully"));
+        return view('profile.index', compact('user'));
     }
 
     /**
