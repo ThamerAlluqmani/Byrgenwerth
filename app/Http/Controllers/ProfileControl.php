@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class ProfileControl extends Controller
 {
@@ -86,10 +87,19 @@ class ProfileControl extends Controller
 
         }
         $validateFields = [
-            'name' => 'required|min:4|max:20',
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+
         ];
         $this->validate($request, $validateFields);
+
+        $request->user()->fill([
+            'password' => Hash::make($request->$validateFields['password'])
+        ])->save();
+
         $user->update($request->all());
+
         $request->session()->flash('successMsg', __("User has been modified successfully"));
         return redirect()->back();
     }
