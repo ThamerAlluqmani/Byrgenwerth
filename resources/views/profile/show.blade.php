@@ -13,15 +13,13 @@
         </div>
 
         <div class="card-body">
-
             {{ $user }}
-
         </div>
 
         <div class="card-footer">
             <div>
             <span>
-           <b> {{__("Author")}} :</b> {{$user->user->name}}
+           <b> {{__("Author")}} :</b> {{$user->name}}
         </span>
 
             </div>
