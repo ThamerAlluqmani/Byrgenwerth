@@ -15,11 +15,18 @@ class ProfileControl extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
+    public function __construct()
+    {
+        $this->middleware('auth')->except('show', 'index');
+    }
+
     public function index()
     {
         //
         $user = Auth::user();
-        return view('profile.index' , compact('user'));
+        return view('profile.index', compact('user'));
     }
 
     /**
@@ -35,7 +42,7 @@ class ProfileControl extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -46,7 +53,7 @@ class ProfileControl extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\User  $user
+     * @param \App\User $user
      * @return \Illuminate\Http\Response
      */
     public function show(Article $article)
@@ -59,29 +66,33 @@ class ProfileControl extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\User  $user
+     * @param \App\User $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit()
     {
         $user = Auth::user();
         if (Auth::id() != $user->id) {
 
             return abort(401);
 
+        } else {
+
+            return view('profile.edit', compact('user'));
+
+
         }
-        return view('profile.edit', compact('user'));
         //
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\User  $user
+     * @param \Illuminate\Http\Request $request
+     * @param \App\User $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request , User $user)
+    public function update(Request $request)
     {
 
         $user = Auth::user();
@@ -89,20 +100,24 @@ class ProfileControl extends Controller
 
             return abort(401);
 
+        } else {
+
+            $validateFields = [
+                'name' => ['required', 'string', 'max:255'],
+            ];
+            $this->validate($request, $validateFields);
+            $user->update($request->all());
+            $request->session()->flash('successMsg', __("Profile has been modified successfully"));
+            return redirect()->back();
+
         }
-        $validateFields = [
-            'name' => ['required', 'string', 'max:255'],
-        ];
-        $this->validate($request, $validateFields);
-        $user->update($request->all());
-        $request->session()->flash('successMsg', __("Profile has been modified successfully"));
-        return redirect()->back();
+
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\User  $user
+     * @param \App\User $user
      * @return \Illuminate\Http\Response
      */
     public function destroy(User $user)
