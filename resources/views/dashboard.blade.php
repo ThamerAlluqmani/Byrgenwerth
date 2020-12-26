@@ -16,7 +16,7 @@
 
            <div class="text-center mt-3">
                <a href="{{route('articles.create')}}" class="btn  btn-primary mb-4"><i class="fa fa-file-text-o"></i> {{__("Create new article")}}</a>
-               <a href="{{route('profile.index')}}" class="btn  btn-primary mb-4"><i class="fa fa-file-text-o"></i> {{__("Profile")}}</a>
+               <a href="{{route('profile.index')}}" class="btn  btn-primary mb-4"><i class="fa fa-user-o"></i> {{__("Profile")}}</a>
 {{--               <a href="{{route('articles.index')}}" class="btn btn-success mb-4"><i class="fa fa-files-o"></i> {{__("Browse all articles")}}</a>--}}
            </div>
 
