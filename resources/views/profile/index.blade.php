@@ -1,8 +1,10 @@
 @extends('layouts.app')
 @section('title' , __('Profile'))
 @section('content')
-
-    <a  class="btn btn-warning" href="{{route('profile.edit' , $user)}}">edit profile</a>
+    @if(Session::has('successMsg'))
+        @include('_alerts.success')
+    @endif
+    <a  class="btn btn-warning" href="{{route('profile.edit' , $user)}}"><i class="fa fa-edit"></i> {{__("Edit")}}</a>
 
 
 @endsection

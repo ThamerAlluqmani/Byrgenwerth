@@ -23,9 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f034243-60a2-41ec-8986-defd34c88b33" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/profile/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProfileControl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProfileControl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/profile/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -280,9 +281,9 @@
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state x="297" y="247" width="672" height="677" key="run.anything.popup/0.0.2560.1050@0.0.2560.1050" timestamp="1607264375127" />
-    <state x="774" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1608826276356">
+    <state x="774" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1609004206232">
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
-    <state x="774" y="237" width="672" height="678" key="search.everywhere.popup/0.0.2560.1050@0.0.2560.1050" timestamp="1608826276356" />
+    <state x="774" y="237" width="672" height="678" key="search.everywhere.popup/0.0.2560.1050@0.0.2560.1050" timestamp="1609004206232" />
   </component>
 </project>

@@ -85,9 +85,13 @@ class ProfileControl extends Controller
             return abort(401);
 
         }
+        $validateFields = [
+            'name' => 'required|min:4|max:20',
+        ];
+        $this->validate($request, $validateFields);
         $user->update($request->all());
         $request->session()->flash('successMsg', __("User has been modified successfully"));
-        return view('profile.index', compact('user'));
+        return redirect()->back();
     }
 
     /**

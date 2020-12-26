@@ -1,7 +1,10 @@
 @extends('layouts.app')
 @section('title' , __('Profile Edit'))
 @section('content')
-
+@section('content')
+    @if(Session::has('successMsg'))
+        @include('_alerts.success')
+    @endif
 
     <form action="{{route('profile.update' , $user)}}" method="post">
         @method('PATCH')
