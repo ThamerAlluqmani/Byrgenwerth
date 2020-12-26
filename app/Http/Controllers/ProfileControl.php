@@ -48,7 +48,10 @@ class ProfileControl extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(){
+    public function show(User $user){
+        $user = Auth::user();
+
+        return view('profile.show', compact('user'));
 
     }
 
