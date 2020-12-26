@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', $user->name)
+@section('title', $article->user()->name)
 @section('content')
 
     @if(Session::has('successMsg'))
@@ -13,35 +13,35 @@
         </div>
 
         <div class="card-body">
-            {{ $user }}
+            {{ $article->user() }}
         </div>
 
         <div class="card-footer">
             <div>
             <span>
-           <b> {{__("Author")}} :</b> {{$user->name}}
+           <b> {{__("Author")}} :</b> {{$article->user()->name}}
         </span>
 
             </div>
             <div>
             <span>
-           <b> {{__("Created at")}} :</b> {{$user->created_at}}
+           <b> {{__("Created at")}} :</b> {{$article->user()->created_at}}
         </span>
             </div>
 
             <div>
             <span>
-           <b> {{__("Updated at")}} :</b> {{$user->updated_at}}
+           <b> {{__("Updated at")}} :</b> {{$article->user()->updated_at}}
         </span>
             </div>
 
             @auth
-                @if($user->id === \Auth::user()->id)
+                @if($article->user()->id === \Auth::user()->id)
                     <div class="align-items-center">
 
                         <br>
-                        <a href="{{route('profile.edit', $user)}}" class="btn btn-warning"><i class="fa fa-edit"></i> {{__("Edit")}}</a>
-                        <form method="post" action="{{route('profile.destroy', $user)}}" style="display: inline-block">
+                        <a href="{{route('profile.edit', $article->user())}}" class="btn btn-warning"><i class="fa fa-edit"></i> {{__("Edit")}}</a>
+                        <form method="post" action="{{route('profile.destroy', $article->user())}}" style="display: inline-block">
                             @method('DELETE')
                             @csrf
                             <button onclick="return confirm('{{__("Are you sure you want to delete this article ?")}}')"

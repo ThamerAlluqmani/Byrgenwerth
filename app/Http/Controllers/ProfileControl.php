@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Article;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -48,11 +49,11 @@ class ProfileControl extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user){
-        $user = Auth::user();
-
-        return view('profile.show', compact('user'));
-
+    public function show(Article $article)
+    {
+        //
+        dd($article->user());
+        return view('profile.show', compact('article'));
     }
 
     /**

@@ -7,7 +7,7 @@
             <p>{{implode(' ', array_slice(explode(' ', $article->info), 0, 10))}} ... <a href="{{route('articles.show' , $article->id)}}">{{__("Show more")}}</a></p>
         </div>
         <div class="card-footer">
-            <i class="fa fa-user fa-lg mb-2"></i> <a class="text-info" style="text-decoration: none" href="{{route('profile.show' , $article->user->name)}}">{{$article->user->name}}</a>
+            <i class="fa fa-user fa-lg mb-2"></i> <a class="text-info" style="text-decoration: none" href="{{route('profile.show' , $article->user->id)}}">{{$article->user->name}}</a>
         </div>
 
     </div>

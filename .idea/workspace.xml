@@ -24,6 +24,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1f034243-60a2-41ec-8986-defd34c88b33" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProfileControl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProfileControl.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/articles/_article-template.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articles/_article-template.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/profile/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/show.blade.php" afterDir="false" />
     </list>
@@ -263,10 +264,10 @@
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state x="378" y="326" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1050@0.0.2560.1050" timestamp="1608897279630" />
-    <state x="377" y="279" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609005230730">
+    <state x="377" y="279" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609017154280">
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
-    <state x="377" y="279" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.2560.1050@0.0.2560.1050" timestamp="1609005230730" />
+    <state x="377" y="279" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.2560.1050@0.0.2560.1050" timestamp="1609017154280" />
     <state width="512" height="446" key="SwitcherDM" timestamp="1606892831405">
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
