@@ -23,25 +23,6 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="email">{{__("Email")}}</label>
-                    <input type="email" name="email" class="form-control" @isset($user) value="{{$user->email}}" @endisset>
-                </div>
-
-                <div class="form-group">
-                    <label for="password">{{__("Password")}}</label>
-                    <input type="password" name="password" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="password-confirm">{{__("Confirm Password")}}</label>
-                    <input id="password-confirm" type="password" class="form-control"
-                           name="password_confirmation"
-                           required autocomplete="new-password">
-                </div>
-
-
-
-
-                <div class="form-group">
                     <button class="btn btn-lg btn-success">{{__("Edit")}}</button>
                 </div>
 

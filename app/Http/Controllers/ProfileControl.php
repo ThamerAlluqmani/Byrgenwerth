@@ -88,19 +88,10 @@ class ProfileControl extends Controller
         }
         $validateFields = [
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-
         ];
         $this->validate($request, $validateFields);
-
-        $request->user()->fill([
-            'password' => Hash::make($request->$validateFields['password'])
-        ])->save();
-
         $user->update($request->all());
-
-        $request->session()->flash('successMsg', __("User has been modified successfully"));
+        $request->session()->flash('successMsg', __("Profile has been modified successfully"));
         return redirect()->back();
     }
 
