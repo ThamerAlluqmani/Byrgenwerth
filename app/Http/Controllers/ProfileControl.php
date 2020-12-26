@@ -59,6 +59,13 @@ class ProfileControl extends Controller
      */
     public function edit(User $user)
     {
+        $user = Auth::user();
+        if (Auth::id() != $user->id) {
+
+            return abort(401);
+
+        }
+        return view('profile.edit', compact('user'));
         //
     }
 
@@ -69,8 +76,9 @@ class ProfileControl extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(Request $request , User $user)
     {
+
         $user = Auth::user();
         if (Auth::id() != $user->id) {
 
