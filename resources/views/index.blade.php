@@ -1,6 +1,5 @@
-
 @section('title', __("Home"))
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <title>{{ config('app.name', 'Byrgenwerth') }} | @yield('title')</title>
@@ -10,10 +9,12 @@
             font-family: 'Cairo', sans-serif;
 
         }
-        a{
+
+        a {
             text-decoration: none;
 
         }
+
         #intro {
             background-image: url('background.jpg');
             background-size: cover;
@@ -51,37 +52,39 @@
 
         <div id="features" class="mt-5">
             <p class="px-3 mb-5">
-                <a href="{{route('index')}}">{{__("Byrgenwerth")}}</a> هي كلية قديمة خصصت لدراسة العظماء وعالمهم، مجموعة من طلاب هذه الكلية اكتشفوا معابد قديمة يحتويها نوع من أنواع الدماء القديمة لاحقاً عرفت بدماء العظماء
-                أدى ظهور هذه الدماء لحدوث فوضى وتمرد على ماستر ويليام، وهو أحد كبار الشخصيات المعروفة داخل هذه الكلية ، تم إنشاء المدونة بناء على هذه الكلية حيث سيتم دراسة ماتبقى من الآثار          </p>
+                <a href="{{route('index')}}">{{__("Byrgenwerth")}}</a> هي كلية قديمة خصصت لدراسة العظماء وعالمهم، مجموعة
+                من طلاب هذه الكلية اكتشفوا معابد قديمة يحتويها نوع من أنواع الدماء القديمة لاحقاً عرفت بدماء العظماء
+                أدى ظهور هذه الدماء لحدوث فوضى وتمرد على ماستر ويليام، وهو أحد كبار الشخصيات المعروفة داخل هذه الكلية ،
+                تم إنشاء المدونة بناء على هذه الكلية حيث سيتم دراسة ماتبقى من الآثار </p>
             <div class="row text-center">
                 <div class="col-md-4">
-                 <ul class="navbar-nav ml-auto ">
-                     <li class="nav-item">
-                         <a class="nav-link text-info"
-                            href="{{route('articles.index')}}">
-                             <i class="fa fa-files-o fa-lg mb-2" aria-hidden="true"></i>
-                             <br>
-                             {{__("Articles")}}</a>
+                    <ul class="navbar-nav ml-auto ">
+                        <li class="nav-item">
+                            <a class="nav-link text-info"
+                               href="{{route('articles.index')}}">
+                                <i class="fa fa-files-o fa-lg mb-2" aria-hidden="true"></i>
+                                <br>
+                                {{__("Articles")}}</a>
 
-                         <p>{{__("Browse all articles")}}</p>
-                     </li>
-                 </ul>
+                            <p>{{__("Browse all articles")}}</p>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-md-4">
                     @auth
                         <ul class="navbar-nav ml-auto ">
                             <li class="nav-item">
                                 <a class="nav-link text-info"
-                                   href="{{route('dashboard')}}">
-                                    <i class="fa fa-dashboard fa-lg mb-2" aria-hidden="true"></i>
+                                   href="{{route('articles.create')}}">
+                                    <i class="fa fa-file-text-o fa-lg mb-2" aria-hidden="true"></i>
                                     <br>
-                                    {{__("Dashboard")}}</a>
+                                    {{__("Create new article")}}</a>
 
-                                <p>{{__("Create your first new article")}}</p>
+                                <p>{{__("Create an article")}}</p>
                             </li>
                         </ul>
                     @endauth
-                   @guest
+                    @guest
                         <ul class="navbar-nav ml-auto ">
                             <li class="nav-item">
                                 <a class="nav-link text-info"
@@ -99,13 +102,24 @@
                 <div class="col-md-4">
                     <ul class="navbar-nav ml-auto ">
                         <li class="nav-item">
-                            <a class="nav-link text-info"
-                               href="{{route('contact')}}">
-                                <i class="fa fa-file-text-o fa-lg mb-2" aria-hidden="true"></i>
-                                <br>
-                                {{__("Contact us")}}</a>
+                            @auth
+                                <a class="nav-link text-info"
+                                   href="{{route('dashboard')}}">
+                                    <i class="fa fa-dashboard fa-lg mb-2" aria-hidden="true"></i>
+                                    <br>
+                                    {{__("Dashboard")}}</a>
 
-                            <p>{{__("Tell us what you want to talk about it")}}</p>
+                                <p>{{__("Control your data")}}</p>
+                            @endauth
+                            @guest
+                                <a class="nav-link text-info"
+                                   href="{{route('contact')}}">
+                                    <i class="fa fa-file-text-o fa-lg mb-2" aria-hidden="true"></i>
+                                    <br>
+                                    {{__("Contact us")}}</a>
+
+                                <p>{{__("Tell us what you want to talk about it")}}</p>
+                            @endguest
                         </li>
                     </ul>
                 </div>
@@ -115,7 +129,6 @@
 
 
             <div class="card mt-5">
-
 
 
                 <div class="card-header">
@@ -137,8 +150,6 @@
         </div>
     </div>
 </div>
-
-
 
 
 </body>
