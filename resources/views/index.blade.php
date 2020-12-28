@@ -19,7 +19,7 @@
             background-image: url('background.png');
             background-size: cover;
             background-position: center;
-            height: 400pt;
+            height: 350pt;
             position: relative;
         }
 
@@ -46,16 +46,14 @@
     <div class="container shadow-lg p-0">
         <div id="intro">
             <div id="text" class="d-flex align-items-center">
-                <h2 class="text-center w-100">السر يكمن في الدماء!</h2>
+                <h2 class="text-center w-100">{{__("! Our eyes are yet to open")}}</h2>
             </div>
         </div>
 
         <div id="features" class="mt-5">
-            <p class="px-3 mb-5">
-                <a href="{{route('index')}}">{{__("Byrgenwerth")}}</a> هي كلية قديمة خصصت لدراسة العظماء وعالمهم، مجموعة
-                من طلاب هذه الكلية اكتشفوا معابد قديمة يحتويها نوع من أنواع الدماء القديمة لاحقاً عرفت بدماء العظماء
-                أدى ظهور هذه الدماء لحدوث فوضى وتمرد على ماستر ويليام، وهو أحد كبار الشخصيات المعروفة داخل هذه الكلية ،
-                تم إنشاء المدونة بناء على هذه الكلية حيث سيتم دراسة ماتبقى من الآثار </p>
+            <p class="px-3 mb-5">{{__("Byrgenwerth is an old place of learning that now lies abandoned. In its day, Byrgenwerth was home to scholars, and the school was headed by Provost Willem. The students learned of history and archeology .")}}</p>
+
+
             <div class="row text-center">
                 <div class="col-md-4">
                     <ul class="navbar-nav ml-auto ">

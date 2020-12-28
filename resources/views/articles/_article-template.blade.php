@@ -9,9 +9,8 @@
         </div>
         <div class="card-footer">
             {{--            <i class="fa fa-user fa-lg mb-2"></i> <a class="text-info" style="text-decoration: none" href="{{route('profile.show' , $article->user->id)}}">{{$article->user->name}}</a>--}}
-            <p><i class="fa fa-user fa-lg mb-2"></i> {{$article->user->name}}</p>
-
-            <p><i class="fa fa-list fa-lg mb-2"></i>@foreach($article->categories()->get() as $categoris) {{$categoris->title}}@endforeach</p>
+            <p><i class="fa fa-user fa-lg mb-2"></i>    {{$article->user->name}}</p>
+            <p><i class="fa fa-list-alt fa-lg mb-2"></i>@foreach($article->categories()->get() as $categoris) , {{$categoris->title}}@endforeach</p>
         </div>
 
     </div>

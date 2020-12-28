@@ -8,7 +8,6 @@ Auth::routes();
 Route::get('dashboard', 'HomeController@index')->name('dashboard');
 Route::resource('articles' , 'ArticleController');
 Route::resource('profile' , 'ProfileControl');
-
 Route::post('ckeditor/upload', 'CKEditorController@upload')->name('ckeditor.image-upload');
 Route::post('comments/{article}' , 'CommentController@store')->name('comments.store');
 Route::delete('comments/{comment}' , 'CommentController@destroy')->name('comments.destroy');
