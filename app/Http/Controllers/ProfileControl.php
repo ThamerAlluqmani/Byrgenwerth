@@ -108,7 +108,7 @@ class ProfileControl extends Controller
             $this->validate($request, $validateFields);
             $user->update($request->all());
             $request->session()->flash('successMsg', __("Profile has been modified successfully"));
-            return redirect()->back();
+            return redirect()->to('profile');
 
         }
 

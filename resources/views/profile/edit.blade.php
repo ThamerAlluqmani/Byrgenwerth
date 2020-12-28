@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title' , __('Profile Edit'))
+@section('title' , __('Profile edit'))
 @section('content')
 @section('content')
     @if(Session::has('successMsg'))
@@ -11,7 +11,7 @@
         @csrf
         <div class="card">
             <div class="text-center card-header text-muted">
-                <h4><i class="fa fa-user"></i> {{__("Profile")}}</h4>
+                <h4><i class="fa fa-user"></i> {{__("Profile edit")}}</h4>
 
             </div>
 
@@ -23,7 +23,7 @@
                 </div>
 
                 <div class="form-group">
-                    <button class="btn btn-lg btn-success">{{__("Edit")}}</button>
+                    <button class="btn btn-lg btn-warning"><i class="fa fa-edit"></i> {{__("Edit")}}</button>
                 </div>
 
             </div>
