@@ -27,13 +27,14 @@
             </div>
 
 
-
             <div>
             <span>
            <b> {{__("Category")}} :</b>
-                @foreach($article->categories()->get() as $categoris)
-                   {{$categoris->title}}
+             @foreach ($article->categories()->get() as $categoris)
+                    {{ $loop->first ? '' : ' , ' }}
+                   {{ $categoris->title }}
                 @endforeach
+
         </span>
             </div>
 
@@ -55,8 +56,10 @@
                     <div class="align-items-center">
 
                         <br>
-                        <a href="{{route('articles.edit', $article)}}" class="btn btn-warning"><i class="fa fa-edit"></i> {{__("Edit")}}</a>
-                        <form method="post" action="{{route('articles.destroy', $article)}}" style="display: inline-block">
+                        <a href="{{route('articles.edit', $article)}}" class="btn btn-warning"><i
+                                class="fa fa-edit"></i> {{__("Edit")}}</a>
+                        <form method="post" action="{{route('articles.destroy', $article)}}"
+                              style="display: inline-block">
                             @method('DELETE')
                             @csrf
                             <button onclick="return confirm('{{__("Are you sure you want to delete this article ?")}}')"
@@ -93,7 +96,8 @@
                         <div class="form-group">
 
 
-                            <button class="btn btn-secondary" type="submit"><i class="fa fa-send"></i> {{__("Submit")}}</button>
+                            <button class="btn btn-secondary" type="submit"><i class="fa fa-send"></i> {{__("Submit")}}
+                            </button>
                         </div>
 
                     </form>
@@ -103,7 +107,8 @@
 
         </div>
     @else
-        <a href="{{route('login')}}" style="text-decoration: none"   class="text-info "> <i class="fa fa-user"></i> {{__("Login to comment")}}</a>
+        <a href="{{route('login')}}" style="text-decoration: none" class="text-info "> <i
+                class="fa fa-user"></i> {{__("Login to comment")}}</a>
 
     @endauth
 
@@ -118,8 +123,7 @@
                 <p>{!! nl2br(e($comment->content)) !!}</p>
 
 
-
-            @auth
+                @auth
 
                     @if($comment->user_id === \Auth::user()->id)
                         <div class="align-items-center text-lg-left d-inline">
