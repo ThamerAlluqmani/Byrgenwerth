@@ -10,8 +10,6 @@
         </button>
 
 
-
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
@@ -23,11 +21,14 @@
                 <!-- Authentication Links -->
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}"><i class="fa fa-sign-in fa-lg mb-2" aria-hidden="true"></i> {{ __('Login') }}</a>
+                        <a class="nav-link" href="{{ route('login') }}"><i class="fa fa-sign-in fa-lg mb-2"
+                                                                           aria-hidden="true"></i> {{ __('Login') }}</a>
                     </li>
                     @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}"><i class="fa fa-user-plus fa-lg mb-2" aria-hidden="true"></i> {{ __('Register') }}</a>
+                            <a class="nav-link" href="{{ route('register') }}"><i class="fa fa-user-plus fa-lg mb-2"
+                                                                                  aria-hidden="true"></i> {{ __('Register') }}
+                            </a>
                         </li>
                     @endif
                 @else
@@ -39,9 +40,12 @@
 
                         <div class="dropdown-menu dropdown-menu-lg-left" aria-labelledby="navbarDropdown">
 
-                            <a href="{{route('dashboard')}}" class="dropdown-item"><i class="fa fa-dashboard"></i> {{__("Dashboard")}}</a>
-                            <a href="{{route('profile.index')}}" class="dropdown-item"><i class="fa fa-user"></i> {{__("Profile")}}</a>
-                            <a href="{{route('articles.index')}}" class="dropdown-item"><i class="fa fa-files-o"></i> {{__("Articles")}}</a>
+                            <a href="{{route('dashboard')}}" class="dropdown-item"><i
+                                    class="fa fa-dashboard"></i> {{__("Dashboard")}}</a>
+                            <a href="{{route('profile.index')}}" class="dropdown-item"><i
+                                    class="fa fa-user"></i> {{__("Profile")}}</a>
+                            <a href="{{route('articles.index')}}" class="dropdown-item"><i
+                                    class="fa fa-files-o"></i> {{__("Articles")}}</a>
 
 
                             <a class="dropdown-item" href="{{ route('logout') }}"
@@ -58,13 +62,17 @@
                 @endguest
             </ul>
 
-            <a class="text-info nav-link" href="{{ route('locale.setting', 'ar') }}">AR <i class="fa fa-language"></i>
-            </a>
+            @if(config('app.locale') == 'ar')
 
+                <a class="text-info nav-link" href="{{ route('locale.setting', 'en') }}">
+                    <i class="fa fa-language"></i> EN
+                </a>
+            @else
+                <a class="text-info nav-link" href="{{ route('locale.setting', 'ar') }}">AR <i
+                        class="fa fa-language"></i>
+                </a>
 
-            <a class="text-info nav-link" href="{{ route('locale.setting', 'en') }}">
-                <i class="fa fa-language"></i> EN
-            </a>
+            @endif
 
         </div>
     </div>
