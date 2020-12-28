@@ -51,7 +51,8 @@
         </div>
 
         <div id="features" class="mt-5">
-            <p class="px-3 mb-5">{{__("Byrgenwerth is an old place of learning that now lies abandoned. In its day, Byrgenwerth was home to scholars, and the school was headed by Provost Willem. The students learned of history and archeology .")}}</p>
+            <p class="px-3 mb-5">{{__("Byrgenwerth is an old place of learning that now lies abandoned. In its day, Byrgenwerth was home to scholars, and the school was headed by Provost Willem. The students learned of history and archeology ...")}}
+                <a href="{{route('articles.show' , 3)}}">{{__("Show more")}}</a></p>
 
 
             <div class="row text-center">
