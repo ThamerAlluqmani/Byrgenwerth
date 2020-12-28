@@ -56,11 +56,9 @@ class ProfileControl extends Controller
      * @param \App\User $user
      * @return \Illuminate\Http\Response
      */
-    public function show(Article $article)
+    public function show()
     {
         //
-        dd($article->user());
-        return view('profile.show', compact('article'));
     }
 
     /**

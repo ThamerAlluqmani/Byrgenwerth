@@ -102,9 +102,11 @@
             <div class="card p-3 mb-2">
 
                 <br>
-                <p>{{$comment->content}}</p>
+                <p>{!! nl2br(e($comment->content)) !!}</p>
 
-                @auth
+
+
+            @auth
 
                     @if($comment->user_id === \Auth::user()->id)
                         <div class="align-items-center text-lg-left d-inline">
