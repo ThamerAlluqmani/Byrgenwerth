@@ -16,26 +16,26 @@
         }
 
         #intro {
-            background-image: url('background.jpg');
+            background-image: url('background.png');
             background-size: cover;
             background-position: center;
-            height: 400px;
+            height: 400pt;
             position: relative;
         }
 
         #text {
             position: absolute;
-            bottom: 0px;
+            bottom: 0pt;
             width: 100%;
             background-color: #00000080;
-            height: 54px;
+            height: 54pt;
             color: white;
             text-align: center;
-            font-size: 27px;
+            font-size: 27pt;
         }
 
         #features i {
-            font-size: 40px;
+            font-size: 40pt;
         }
 
     </style>
@@ -123,28 +123,25 @@
                         </li>
                     </ul>
                 </div>
-
             </div>
             <link href="{{ asset('css/style2.css') }}" rel="stylesheet">
+    </div>
+        <div class="card mt-5">
 
 
-            <div class="card mt-5">
+            <div class="card-header">
+                <h3 class="text-muted text-center"><i class="fa fa-files-o"></i> {{__("Latest articles")}}</h3>
+            </div>
 
+            <div class="card-body">
+                <div class="row">
+                    @forelse($articles as $article)
 
-                <div class="card-header">
-                    <h3 class="text-muted text-center"><i class="fa fa-files-o"></i> {{__("Latest articles")}}</h3>
-                </div>
+                        @include('articles._article-template')
 
-                <div class="card-body">
-                    <div class="row">
-                        @forelse($articles as $article)
-
-                            @include('articles._article-template')
-
-                        @empty
-                            {{__("No articles yet")}}
-                        @endforelse
-                    </div>
+                    @empty
+                        {{__("No articles yet")}}
+                    @endforelse
                 </div>
             </div>
         </div>

@@ -24,8 +24,20 @@
             <span>
            <b> {{__("Author")}} :</b> {{$article->user->name}}
         </span>
-
             </div>
+
+
+
+            <div>
+            <span>
+           <b> {{__("Category")}} :</b>
+                @foreach($article->categories()->get() as $categoris)
+                   {{$categoris->title}}
+                @endforeach
+        </span>
+            </div>
+
+
             <div>
             <span>
            <b> {{__("Created at")}} :</b> {{$article->created_at}}
@@ -56,6 +68,7 @@
         </div>
     </div>
 
+    <br>
 
     <div class="text-muted mt-4">
         <h4>
