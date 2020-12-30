@@ -1,22 +1,4 @@
 @csrf
-<script src="//cdn.ckeditor.com/4.15.1/full/ckeditor.js"></script>
-
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('.ckeditor').ckeditor();
-    });
-</script>
-
-<script type="text/javascript">
-    CKEDITOR.replace('content', {
-        filebrowserUploadUrl: "{{route('ckeditor.image-upload', ['_token' => csrf_token() ])}}",
-        filebrowserUploadMethod: 'form'
-    });
-</script>
-
-
-
-
 
 <div class="form-group">
     <label for="title">{{__("Title")}}</label>
@@ -43,17 +25,14 @@
     <label for="content">{{__("Info")}}</label>
 
     <textarea name="info" id="info" cols="3" rows="3"
-            placeholder="{{__("Simple overview about the content")}}"  class="form-control">@isset($article){{$article->info}}@endisset</textarea>
+              placeholder="{{__("Simple overview about the content")}}"
+              class="form-control">@isset($article){{$article->info}}@endisset</textarea>
 
 
 </div>
 <div class="form-group">
     <label for="content">{{__("Content")}}</label>
-
-    <textarea name="content" id="content" cols="30" rows="10"
-              class="ckeditor form-control">@isset($article){{$article->content}}@endisset</textarea>
-
-
+    @include('articles.editor')
 </div>
 
 <div class="form-group">
