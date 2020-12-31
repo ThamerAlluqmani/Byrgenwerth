@@ -23,7 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f034243-60a2-41ec-8986-defd34c88b33" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/scripts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/scripts.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/articles/editor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articles/editor.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,11 +187,11 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Thamer\Desktop\laravel\blog\site\resources\lang\ar" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\Byrgenwerth\resources\views\profile" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Thamer\Desktop\laravel\blog\site\resources\lang\ar" />
     </key>
   </component>
   <component name="RunManager">
