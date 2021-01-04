@@ -5,12 +5,8 @@ a.text-info:hover, a.text-info:focus {
     color: #164967 !important;
 }
 
-@media(max-width:1024px){
+input{
+    max-width: 100%   !important;
+    height: auto !important;
 
-    input{
-        max-width: 100%   !important;
-        height: auto !important;
-
-    }
 }
-
