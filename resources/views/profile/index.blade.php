@@ -20,6 +20,13 @@
                </h4>
             </div>
 
+            <div class="">
+                <h4>
+                    <label class="text-info d-inline-block" for="email"><b>{{__("Email")}} : </b></label>
+                    <p class="d-inline-block">{{$user->email}}</p>
+                </h4>
+            </div>
+
             <a  class="btn btn-warning" href="{{route('profile.edit' , $user)}}"><i class="fa fa-edit"></i> {{__("Edit")}}</a>
 
 

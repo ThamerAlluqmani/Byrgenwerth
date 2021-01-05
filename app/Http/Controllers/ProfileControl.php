@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Article;
+use App\Rules\MatchOldPassword;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -102,6 +103,8 @@ class ProfileControl extends Controller
 
             $validateFields = [
                 'name' => ['required', 'string', 'max:255'],
+                'email' => ['required', 'string', 'max:255'],
+                'current_password' => ['required', new MatchOldPassword()],
             ];
             $this->validate($request, $validateFields);
             $user->update($request->all());
