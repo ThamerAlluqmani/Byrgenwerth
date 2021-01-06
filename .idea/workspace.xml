@@ -25,6 +25,8 @@
     <list default="true" id="1f034243-60a2-41ec-8986-defd34c88b33" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/ar.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,11 +189,11 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\Byrgenwerth\resources\views\profile" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Thamer\Desktop\laravel\blog\site\resources\lang\ar" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Byrgenwerth\resources\views\profile" />
     </key>
   </component>
   <component name="RunManager">
@@ -239,6 +241,7 @@
       <workItem from="1608811478237" duration="10585000" />
       <workItem from="1608910511509" duration="4648000" />
       <workItem from="1609770944872" duration="854000" />
+      <workItem from="1609907878667" duration="448000" />
     </task>
     <servers />
   </component>
@@ -281,9 +284,9 @@
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state x="297" y="247" width="672" height="677" key="run.anything.popup/0.0.2560.1050@0.0.2560.1050" timestamp="1607264375127" />
-    <state x="774" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1609906484657">
+    <state x="774" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1609908206831">
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
-    <state x="774" y="237" width="672" height="678" key="search.everywhere.popup/0.0.2560.1050@0.0.2560.1050" timestamp="1609906484657" />
+    <state x="774" y="237" width="672" height="678" key="search.everywhere.popup/0.0.2560.1050@0.0.2560.1050" timestamp="1609908206831" />
   </component>
 </project>

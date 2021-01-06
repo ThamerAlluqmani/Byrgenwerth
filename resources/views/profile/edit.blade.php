@@ -11,7 +11,7 @@
         @csrf
         <div class="card">
             <div class="text-center card-header text-muted">
-                <h4><i class="fa fa-user"></i> {{__("Profile edit")}}</h4>
+                <h4><i class="fa fa-user"></i> {{__("Account edit")}}</h4>
 
             </div>
 
@@ -64,7 +64,7 @@
                 </div>
 
                 <div class="form-group">
-                    <button class="btn btn-lg btn-warning"><i class="fa fa-edit"></i> {{__("Edit")}}</button>
+                    <button class="btn btn-lg btn-warning"><i class="fa fa-edit"></i> {{__("Change")}}</button>
                 </div>
 
             </div>

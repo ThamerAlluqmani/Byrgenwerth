@@ -7,7 +7,7 @@
 
     <div class="card">
         <div class="text-center card-header text-muted">
-            <h4><i class="fa fa-user"></i> {{__("Profile")}}</h4>
+            <h4><i class="fa fa-user"></i> {{__("Account")}}</h4>
 
         </div>
 
@@ -27,7 +27,7 @@
                 </h4>
             </div>
 
-            <a  class="btn btn-warning" href="{{route('profile.edit' , $user)}}"><i class="fa fa-edit"></i> {{__("Edit")}}</a>
+            <a  class="btn btn-warning" href="{{route('profile.edit' , $user)}}"><i class="fa fa-edit"></i> {{__("Account edit")}}</a>
 
 
         </div>

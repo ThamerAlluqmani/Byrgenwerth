@@ -63,7 +63,13 @@
     "Change password" : "تغيير كلمة المرور",
     "New password" : "كلمة المرور الجديدة",
     "Confirm new password" : "تأكيد كلمة المرور الجديدة",
+    "Change" : "تغيير",
     "Password has been Changed successfully" : "تم تغيير كلمة المرور بنجاح",
+
+
+    "Account" : "البيانات الشخصية",
+
+    "Account edit" : "تعديل البيانات الشخصية",
 
 
 
