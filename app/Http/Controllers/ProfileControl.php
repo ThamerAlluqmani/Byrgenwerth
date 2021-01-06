@@ -99,7 +99,22 @@ class ProfileControl extends Controller
 
             return abort(401);
 
-        } else {
+        } else if(isset($request->new_password)) {
+
+            $validateFields = [
+                'current_password' => ['required', new MatchOldPassword()],
+                'new_password' => ['required' , 'min:8'],
+                'new_confirm_password' => ['same:new_password'],
+            ];
+            $this->validate($request, $validateFields);
+            User::find(auth()->user()->id)->update(['password'=> Hash::make($request->new_password)]);
+            $request->session()->flash('successMsg', __("Password has been Changed successfully"));
+            return redirect()->to('profile');
+
+
+
+        }else {
+
 
             $validateFields = [
                 'name' => ['required', 'string', 'max:255'],
