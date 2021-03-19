@@ -11,8 +11,8 @@
 
         <div class="card-body">
             <div class="text-muted text-lg-left">
-{{--               <p>{{__("Email")}} : thamer.allogmani@gmail.com</p>--}}
-               <h3>{{__("Soon")}}</h3>
+               <p>{{__("Email")}} : thamer.allogmani@gmail.com</p>
+               <p>{{__("Phone Number")}} : 0531652858</p>
 
             </div>
         </div>
