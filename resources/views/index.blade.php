@@ -51,80 +51,86 @@
         </div>
 
         <div id="features" class="mt-5">
-            <p class="px-3 mb-5">{{__("Byrgenwerth is an old place of learning that now lies abandoned. In its day, Byrgenwerth was home to scholars, and the school was headed by Provost Willem. The students learned of history and archeology ...")}}
-                <a href="{{route('articles.show' , 3)}}">{{__("Show more")}}</a></p>
+            @if(config('app.locale') == 'ar')
+                <p class="px-3 mb-5">{{__("Byrgenwerth is an old place of learning that now lies abandoned. In its day, Byrgenwerth was home to scholars, and the school was headed by Provost Willem. The students learned of history and archeology ...")}}
+            @else
+                <p style="text-align: left"
+                   class="px-3 mb-5">{{__("Byrgenwerth is an old place of learning that now lies abandoned. In its day, Byrgenwerth was home to scholars, and the school was headed by Provost Willem. The students learned of history and archeology ...")}}
+
+                    @endif
+                    <a href="{{route('articles.show' , 3)}}">{{__("Show more")}}</a></p>
 
 
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <ul class="navbar-nav ml-auto ">
-                        <li class="nav-item">
-                            <a class="nav-link text-info"
-                               href="{{route('articles.index')}}">
-                                <i class="fa fa-files-o fa-lg mb-2" aria-hidden="true"></i>
-                                <br>
-                                {{__("Articles")}}</a>
-
-                            <p>{{__("Browse all articles")}}</p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    @auth
+                <div class="row text-center">
+                    <div class="col-md-4">
                         <ul class="navbar-nav ml-auto ">
                             <li class="nav-item">
                                 <a class="nav-link text-info"
-                                   href="{{route('articles.create')}}">
-                                    <i class="fa fa-file-text-o fa-lg mb-2" aria-hidden="true"></i>
+                                   href="{{route('articles.index')}}">
+                                    <i class="fa fa-files-o fa-lg mb-2" aria-hidden="true"></i>
                                     <br>
-                                    {{__("Create new article")}}</a>
+                                    {{__("Articles")}}</a>
 
-                                <p>{{__("Create an article")}}</p>
+                                <p>{{__("Browse all articles")}}</p>
                             </li>
                         </ul>
-                    @endauth
-                    @guest
+                    </div>
+                    <div class="col-md-4">
+                        @auth
+                            <ul class="navbar-nav ml-auto ">
+                                <li class="nav-item">
+                                    <a class="nav-link text-info"
+                                       href="{{route('articles.create')}}">
+                                        <i class="fa fa-file-text-o fa-lg mb-2" aria-hidden="true"></i>
+                                        <br>
+                                        {{__("Create new article")}}</a>
+
+                                    <p>{{__("Create an article")}}</p>
+                                </li>
+                            </ul>
+                        @endauth
+                        @guest
+                            <ul class="navbar-nav ml-auto ">
+                                <li class="nav-item">
+                                    <a class="nav-link text-info"
+                                       href="{{route('register')}}">
+                                        <i class="fa fa-user-plus fa-lg mb-2" aria-hidden="true"></i>
+                                        <br>
+                                        {{__("Register")}}</a>
+
+                                    <p>{{__("Create your first new article")}}</p>
+                                </li>
+                            </ul>
+
+                        @endguest
+                    </div>
+                    <div class="col-md-4">
                         <ul class="navbar-nav ml-auto ">
                             <li class="nav-item">
-                                <a class="nav-link text-info"
-                                   href="{{route('register')}}">
-                                    <i class="fa fa-user-plus fa-lg mb-2" aria-hidden="true"></i>
-                                    <br>
-                                    {{__("Register")}}</a>
+                                @auth
+                                    <a class="nav-link text-info"
+                                       href="{{route('dashboard')}}">
+                                        <i class="fa fa-dashboard fa-lg mb-2" aria-hidden="true"></i>
+                                        <br>
+                                        {{__("Dashboard")}}</a>
 
-                                <p>{{__("Create your first new article")}}</p>
+                                    <p>{{__("Control your data")}}</p>
+                                @endauth
+                                @guest
+                                    <a class="nav-link text-info"
+                                       href="{{route('contact')}}">
+                                        <i class="fa fa-file-text-o fa-lg mb-2" aria-hidden="true"></i>
+                                        <br>
+                                        {{__("Contact us")}}</a>
+
+                                    <p>{{__("Tell us what you want to talk about it")}}</p>
+                                @endguest
                             </li>
                         </ul>
-
-                    @endguest
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <ul class="navbar-nav ml-auto ">
-                        <li class="nav-item">
-                            @auth
-                                <a class="nav-link text-info"
-                                   href="{{route('dashboard')}}">
-                                    <i class="fa fa-dashboard fa-lg mb-2" aria-hidden="true"></i>
-                                    <br>
-                                    {{__("Dashboard")}}</a>
-
-                                <p>{{__("Control your data")}}</p>
-                            @endauth
-                            @guest
-                                <a class="nav-link text-info"
-                                   href="{{route('contact')}}">
-                                    <i class="fa fa-file-text-o fa-lg mb-2" aria-hidden="true"></i>
-                                    <br>
-                                    {{__("Contact us")}}</a>
-
-                                <p>{{__("Tell us what you want to talk about it")}}</p>
-                            @endguest
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <link href="{{ asset('css/style2.css') }}" rel="stylesheet">
-    </div>
+                <link href="{{ asset('css/style2.css') }}" rel="stylesheet">
+        </div>
         <div class="card mt-5">
 
 
